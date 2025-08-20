@@ -1,0 +1,219 @@
+.whoWe {
+  display: flex;
+  padding: 80px 0 108px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  background: radial-gradient(
+    293.96% 114.16% at 0% 0%,
+    #12273a 0%,
+    #080808 100%
+  );
+  position: relative;
+  height: 100vh;
+}
+
+.whoWeTexts {
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.whoWeTitle {
+  color: #fff;
+}
+
+.whoWeSubtitle {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  max-width: 600px;
+}
+
+.whoWeImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 647.999px;
+  height: auto;
+}
+
+.whoWeCards {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 0px 50px;
+}
+
+.whoWeCard {
+  width: 223px;
+  height: 363px;
+  padding: 56px 48px;
+
+  border: 1px solid #676767;
+  background: linear-gradient(
+      65deg,
+      rgba(0, 0, 0, 0) 13.65%,
+      rgba(54, 161, 255, 0.4) 100.02%
+    ),
+    rgba(0, 0, 0, 0.27);
+  box-shadow: 0 0 44px 0 rgba(54, 161, 255, 0.3);
+  backdrop-filter: blur(7.5px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  position: relative;
+}
+
+.whoWeCardTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+  z-index: 1;
+}
+
+.whoWeCardNum {
+  height: 40px;
+  width: 40px;
+  cursor: auto;
+}
+
+.whoWeCardTitle {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+}
+
+.whoWeCardImg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.whoWeCardSubtitle {
+  color: rgba(255, 255, 255, 0.68);
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.whoWeCardSubtitle span {
+  color: rgba(255, 255, 255, 0.32);
+  text-transform: lowercase;
+}
+
+@media (max-width: 1285px) {
+  .whoWeCard {
+    overflow: hidden;
+    padding: 24px;
+  }
+
+  .whoWeCardImg {
+    width: 350px;
+    height: auto;
+    right: -50px;
+  }
+
+  .whoWe {
+    height: 100%;
+    gap: 50px;
+    padding: 75px 0 90px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .whoWe {
+    height: 100%;
+    gap: 50px;
+    padding: 70px 0 80px 0;
+  }
+
+  .whoWeCards {
+    padding: 0px 20px;
+  }
+  .whoWeCard {
+    flex: 0 0 400px;
+    scroll-snap-type: center;
+    overflow: hidden;
+    margin-block: auto;
+    border: 1px solid #676767;
+    background: rgba(25, 35, 43, 0.45);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease-in-out;
+    height: 385px;
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+  }
+
+  .whoWeCards {
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    width: 100%;
+    gap: 12px;
+    height: 460px;
+  }
+
+  .mobileCarousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .whoWeCard {
+    scroll-snap-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .whoWeCard.activeCard {
+    border: 1px solid #a5c6e2;
+    background: linear-gradient(
+        65deg,
+        rgba(0, 0, 0, 0) 13.65%,
+        rgba(54, 161, 255, 0.4) 100.02%
+      ),
+      rgba(0, 0, 0, 0.27);
+    box-shadow: 0 0 44px 0 rgba(54, 161, 255, 0.3);
+    backdrop-filter: blur(7.5px);
+  }
+
+  .whoWeImg {
+    width: 583px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whoWeImg {
+    width: auto;
+  }
+
+  .whoWeCard {
+    flex: 0 0 343px;
+  }
+
+  .whoWeTexts {
+    padding: 0px 16px;
+  }
+
+  .whoWe {
+    padding: 60px 0 55px 0;
+  }
+}

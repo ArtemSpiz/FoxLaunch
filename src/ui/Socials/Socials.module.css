@@ -28,6 +28,15 @@
   flex-shrink: 0;
 }
 
+.socialNumber {
+  color: #a5c6e2;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107%; /* 19.26px */
+}
+
 @media (max-width: 768px) {
   .socialIcon {
     width: 48px;

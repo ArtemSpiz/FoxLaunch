@@ -1,5 +1,6 @@
 import Hero from "../components/Home/Hero/Hero";
 import Made from "../components/Home/Made/Made";
+import WhoWeAre from "../components/Home/WhoWeAre/WhoWeAre";
 import Header from "../layout/Header/Header";
 import styles from "./page.module.css";
 
@@ -9,6 +10,7 @@ export default function Page() {
       <Header />
       <Hero />
       <Made />
+      <WhoWeAre />
     </div>
   );
 }

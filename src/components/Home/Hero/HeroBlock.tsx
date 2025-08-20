@@ -68,22 +68,17 @@ export default function HeroBlock({ block }: HeroBlockProps) {
               {
                 name: "Snapchat",
                 icon: snapchat,
-                borderTop: border,
-                borderBottom: border,
               },
               {
                 name: "Facebook",
                 icon: facebook,
-                borderTop: border,
-                borderBottom: border,
               },
               {
                 name: "YouTube",
                 icon: youtube,
-                borderTop: border,
-                borderBottom: border,
               },
             ]}
+            stroke="rgba(255, 255, 255, 0.46)"
           />
         </div>
       );

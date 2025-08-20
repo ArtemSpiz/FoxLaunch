@@ -1,3 +1,8 @@
+.madeWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .made {
   display: flex;
   flex-direction: column;
@@ -6,8 +11,6 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 340px);
   background: #f7f7f7;
-  position: relative;
-  overflow: hidden;
 }
 
 .madeGlowMob {
@@ -17,7 +20,7 @@
 .madeGlow {
   position: absolute;
   right: 0;
-  bottom: -200px;
+  top: 200px;
 }
 
 .madeCardWrapper {
@@ -73,11 +76,7 @@
 
 .cardTextTitle {
   color: #080808;
-  font-family: "IBM Plex Mono";
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 107%; /* 40.66px */
+  text-align: start;
 }
 
 .madeCardTop {
@@ -106,7 +105,7 @@
   position: absolute;
   top: 50%;
   right: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(50%, -65%);
   width: 100%;
   max-width: 225px;
   z-index: 0;
@@ -114,6 +113,7 @@
 
 .madeImg1 {
   max-width: 320px;
+  transform: translate(50%, -50%);
 }
 
 .cardTexts {
@@ -149,17 +149,9 @@
   .madeCard {
     padding: 24px;
   }
-
-  .cardTextTitle {
-    font-size: 35px;
-  }
 }
 
 @media (max-width: 1024px) {
-  .cardTextTitle {
-    font-size: 32px;
-  }
-
   .made {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 340px);
@@ -201,7 +193,6 @@
 
 @media (max-width: 768px) {
   .cardTextTitle {
-    font-size: 28px;
     max-width: 300px;
   }
 
@@ -219,10 +210,9 @@
     right: auto;
     left: 0;
     rotate: 180deg;
-    bottom: 50%;
-    transform: rotate(180deg) translate(0, -30%);
+    top: 50%;
+    transform: rotate(180deg) translate(0, 50%);
     width: 420px;
-    height: 361px;
     pointer-events: none;
   }
 
