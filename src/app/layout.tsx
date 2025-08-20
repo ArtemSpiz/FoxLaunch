@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { IBM_Plex_Mono, IBM_Plex_Sans, DM_Sans } from "next/font/google";
+import { IBM_Plex_Mono, IBM_Plex_Sans, DM_Sans, Sora } from "next/font/google";
 
 const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-ibm-plex-mono",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-sora",
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${dmSans.variable} font-sans`}
+        className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} ${dmSans.variable} ${sora.variable} font-sans`}
       >
         {children}
       </body>

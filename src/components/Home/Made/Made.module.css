@@ -1,6 +1,7 @@
 .madeWrapper {
   position: relative;
   overflow: hidden;
+  background: #f7f7f7;
 }
 
 .made {
@@ -10,7 +11,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 340px);
-  background: #f7f7f7;
+  margin-inline: auto;
 }
 
 .madeGlowMob {

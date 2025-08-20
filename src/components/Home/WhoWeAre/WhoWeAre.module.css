@@ -140,6 +140,12 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .whoWeCards {
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .whoWe {
     height: 100%;
