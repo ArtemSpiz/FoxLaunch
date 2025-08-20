@@ -1,42 +1,50 @@
 import styles from "./Socials.module.css";
-import snapchat from "../../assets/svg/Snapchat.svg";
-import facebook from "../../assets/svg/Facebook.svg";
-import youtube from "../../assets/svg/Youtube.svg";
-import border from "../../assets/img/borderSocials.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const SocialsLinks = [
-  { name: "Snapchat", icon: snapchat },
-  { name: "Facebook", icon: facebook },
-  { name: "YouTube", icon: youtube },
-];
+type SocialLink = {
+  name: string;
+  icon: string | StaticImageData;
+  borderTop?: string | StaticImageData;
+  borderBottom?: string | StaticImageData;
+  iconClass?: string;
+};
 
-export default function Socials() {
+type SocialsProps = {
+  links: SocialLink[];
+  wrapperClass?: string;
+};
+
+export default function Socials({ links, wrapperClass = "" }: SocialsProps) {
   return (
-    <a className={styles.socialIcons}>
-      {SocialsLinks.map((link, i) => (
-        <span className={styles.socialIcon} key={i}>
-          <Image
-            src={border}
-            alt=" "
-            className={styles.borderSocials}
-            unoptimized
-          />
+    <div className={`${styles.socialIcons} `}>
+      {links.map((link, i) => (
+        <span className={`${styles.socialIcon} ${wrapperClass}`} key={i}>
+          {link.borderTop && (
+            <Image
+              src={link.borderTop}
+              alt=""
+              className={`${styles.borderSocials} `}
+              unoptimized
+            />
+          )}
+
           <Image
             src={link.icon}
             alt={link.name}
-            className={styles.socialIconImg}
+            className={`${styles.socialIconImg} ${link.iconClass || ""}`}
             unoptimized
           />
 
-          <Image
-            src={border}
-            alt=" "
-            className={`${styles.borderSocials} ${styles.borderBottom}`}
-            unoptimized
-          />
+          {link.borderBottom && (
+            <Image
+              src={link.borderBottom}
+              alt=""
+              className={`${styles.borderSocials} ${styles.borderBottom}`}
+              unoptimized
+            />
+          )}
         </span>
       ))}
-    </a>
+    </div>
   );
 }

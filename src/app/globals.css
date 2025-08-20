@@ -16,11 +16,6 @@ img {
   height: 100vh;
 }
 
-.container {
-  padding: 80px 48px;
-  max-width: 1600px;
-}
-
 Image {
   height: 100%;
   width: 100%;
@@ -39,4 +34,27 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.container {
+  padding: 80px 48px;
+  max-width: 1600px;
+}
+
+@media (max-width: 1285px) {
+  .container {
+    padding: 70px 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
 }

@@ -3,6 +3,11 @@ import styles from "./Hero.module.css";
 import lineHero from "../../../assets/img/lineHero.png";
 import Socials from "@/src/ui/Socials/Socials";
 
+import snapchat from "../../../assets/svg/Snapchat.svg";
+import facebook from "../../../assets/svg/Facebook.svg";
+import youtube from "../../../assets/svg/Youtube.svg";
+import border from "../../../assets/img/borderSocials.png";
+
 type HeroBlockProps = {
   block: {
     type: string;
@@ -58,7 +63,28 @@ export default function HeroBlock({ block }: HeroBlockProps) {
       return (
         <div className={`${styles.heroCard} ${styles.heroCardSoc}`}>
           <h4 className={styles.heroCardTitle}>{block.title}</h4>
-          <Socials />
+          <Socials
+            links={[
+              {
+                name: "Snapchat",
+                icon: snapchat,
+                borderTop: border,
+                borderBottom: border,
+              },
+              {
+                name: "Facebook",
+                icon: facebook,
+                borderTop: border,
+                borderBottom: border,
+              },
+              {
+                name: "YouTube",
+                icon: youtube,
+                borderTop: border,
+                borderBottom: border,
+              },
+            ]}
+          />
         </div>
       );
 
