@@ -1,0 +1,18 @@
+.BlueButton {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: linear-gradient(0deg, #a5c6e2 0%, #a5c6e2 100%), #39a1ff;
+
+  color: #080808;
+  font-family: "IBM Plex Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  letter-spacing: -0.32px;
+}

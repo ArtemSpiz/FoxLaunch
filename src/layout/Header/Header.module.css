@@ -1,0 +1,150 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 48px;
+  position: absolute;
+  top: 24px;
+  right: 50%;
+  transform: translate(50%, 0);
+  width: 100%;
+  z-index: 44;
+}
+
+.headerLogo {
+  color: #fff;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "IBM Plex Mono";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+  width: 188px;
+}
+
+.headerLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.headerLink {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: -0.28px;
+}
+
+.headerBtns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerLogInBtn {
+  display: flex;
+  height: 32px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  gap: 10px;
+  border: 1px solid #fff;
+
+  color: #fff;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: -0.28px;
+}
+
+.headerWhiteBtn {
+  display: flex;
+  height: 32px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  gap: 4px;
+  border: none;
+  white-space: nowrap;
+
+  color: #080808;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: -0.28px;
+}
+
+.headerWhiteBtn img {
+  height: auto;
+  width: auto;
+}
+
+.headerBurger {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background: #fff;
+  display: none;
+}
+
+.headerBurger img {
+  height: auto;
+  width: auto;
+}
+
+@media (max-width: 1024px) {
+  .headerLogo {
+    width: auto;
+  }
+
+  .header {
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerBurger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .header {
+    padding: 0px 16px;
+  }
+
+  .headerLinks {
+    display: none;
+  }
+
+  .headerBtns {
+    gap: 12px;
+  }
+
+  .headerBurgerMenu {
+    position: absolute;
+    z-index: 44;
+    top: calc(100% + 20px);
+    background-color: #080808;
+  }
+
+  .headerLinksMob {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+}
