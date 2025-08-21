@@ -16,9 +16,11 @@
 
 .madeGlowMob {
   display: none;
+  pointer-events: none;
 }
 
 .madeGlow {
+  pointer-events: none;
   position: absolute;
   right: 0;
   top: 200px;
@@ -68,10 +70,21 @@
   position: relative;
   width: 100%;
   height: 100%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
-.madeCard:nth-child(7),
-.madeCard:nth-child(4) {
+.madeArrow {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.madeCard:hover .madeArrow {
+  transform: translate(10px, -10px);
+  transition: transform 0.3s ease;
+}
+
+.madeCardWrapper:nth-child(7),
+.madeCardWrapper:nth-child(4) {
   background: rgba(165, 198, 226, 0.3);
 }
 

@@ -55,9 +55,11 @@
   align-self: stretch;
   border-left: 1px solid #eaeaea;
   background: transparent;
+  width: 300px;
+  transition: all 0.5s ease-in-out;
 }
 
-.ecosystemCard1 {
+.ecosystemCard.active {
   border-left: 1px solid #eaeaea;
   background: rgba(165, 198, 226, 0.3);
   width: 442px;
@@ -120,24 +122,17 @@
   }
 
   .ecosystemCard {
-    flex: 1 0 0;
+    width: 450px;
   }
 
-  .ecosystemCard1 {
+  .ecosystemCard.active {
     width: 550px;
-    flex: none;
   }
 }
 
 @media (max-width: 1024px) {
   .ecosystemCard {
     padding: 24px;
-  }
-
-  .ecosystemCard1 {
-    border-left: 1px solid #eaeaea;
-    background: rgba(165, 198, 226, 0.3);
-    width: 300px;
   }
 
   .ecosystemText {
@@ -152,12 +147,11 @@
 
 @media (max-width: 768px) {
   .ecosystemCard {
+    width: 100%;
     padding: 24px;
   }
 
-  .ecosystemCard1 {
-    border-left: 1px solid #eaeaea;
-    background: rgba(165, 198, 226, 0.3);
+  .ecosystemCard.active {
     width: 100%;
   }
 

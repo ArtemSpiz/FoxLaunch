@@ -8,7 +8,9 @@ export default function Trouble() {
         <div className={`${styles.troubleTitle} title`}>
           Having trouble buying the presale?
         </div>
-        <button className={styles.troubleBtn}>Contact Us</button>
+        <button className={styles.troubleBtn}>
+          <span>Contact Us</span>
+        </button>
       </div>
     </div>
   );

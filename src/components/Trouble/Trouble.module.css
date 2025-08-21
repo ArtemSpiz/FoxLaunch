@@ -44,6 +44,9 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
 
   border: 1px solid #fff;
   background: rgba(0, 0, 0, 0.01);
@@ -52,9 +55,96 @@
   color: #fff;
   font-family: "IBM Plex Mono";
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 107%; /* 19.26px */
+  line-height: 107%;
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.troubleBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+  transform: skewX(-20deg);
+}
+
+.troubleBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(
+    circle,
+    rgba(57, 161, 255, 0.4) 0%,
+    rgba(57, 161, 255, 0.1) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  transition: all 0.5s ease;
+}
+
+.troubleBtn:hover {
+  transform: translateY(-3px) scale(1.05);
+  border-color: #39a1ff;
+  background: rgba(57, 161, 255, 0.1);
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(57, 161, 255, 0.8);
+}
+
+.troubleBtn:hover::before {
+  animation: shimmerMove 1.2s linear infinite;
+}
+
+.troubleBtn:hover::after {
+  width: 220px;
+  height: 220px;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+.troubleBtn:active {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 60px 0 #39a1ff, 0 5px 15px rgba(57, 161, 255, 0.4);
+  transition: all 0.1s ease;
+}
+.troubleBtn span {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+@keyframes shimmerMove {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.9;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -69,8 +159,30 @@
     height: 450px;
     background-size: 868px 140%;
   }
+
   .troubleText {
     max-width: 350px;
     margin-bottom: 0;
   }
+
+  .troubleBtn:hover {
+    transform: translateY(-2px) scale(1.03);
+    animation: none;
+  }
+
+  .troubleBtn:active {
+    transform: translateY(0) scale(1.01);
+  }
+}
+
+.troubleBtn:hover::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    rgba(57, 161, 255, 0.4),
+    rgba(255, 255, 255, 0.3),
+    rgba(57, 161, 255, 0.2),
+    transparent
+  );
 }

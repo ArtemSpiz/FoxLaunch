@@ -9,23 +9,32 @@ type SocialLink = {
   iconClass?: string;
   text?: string;
   component?: ReactNode;
+  onClick?: () => void;
 };
 
 type SocialsProps = {
   links: SocialLink[];
   wrapperClass?: string;
   stroke?: string;
+  enableHover?: boolean;
 };
 
 export default function Socials({
   links,
   wrapperClass = "",
   stroke,
+  enableHover = true,
 }: SocialsProps) {
   return (
-    <div className={`${styles.socialIcons} `}>
+    <div className={`${styles.socialIcons}`}>
       {links.map((link, i) => (
-        <span className={`${styles.socialIcon} ${wrapperClass}`} key={i}>
+        <span
+          className={`${styles.socialIcon} ${wrapperClass} ${
+            enableHover ? styles.hoverEnabled : styles.hoverDisabled
+          }`}
+          key={i}
+          onClick={link.onClick}
+        >
           <Border stroke={stroke} />
 
           {link.component && link.component}

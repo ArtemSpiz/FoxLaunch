@@ -84,6 +84,7 @@
   bottom: -80px;
   right: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .neverCardLeftPags {
@@ -157,13 +158,13 @@
 .fadeIn {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 .fadeOut {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 .neverCardRightContent {
@@ -204,7 +205,7 @@
 }
 
 .neverCardRArrow {
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .neverCardRArrow.arrowOpen {
@@ -226,13 +227,25 @@
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .neverCardRContSubtitle.subtitleOpen {
   max-height: 200px;
   opacity: 1;
   margin-top: 16px;
+}
+
+@media (min-width: 1600px) {
+  .never {
+    justify-content: space-between;
+    max-width: none;
+  }
+
+  .neverCardRight,
+  .neverCardLeft {
+    max-width: 900px;
+  }
 }
 
 @media (max-width: 1285px) {

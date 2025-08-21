@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Socials from "@/src/ui/Socials/Socials";
 import styles from "./Ecosystem.module.css";
 import Image from "next/image";
@@ -47,6 +50,8 @@ const EcosystemCards = [
 ];
 
 export default function Ecosystem() {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
   return (
     <div className={`${styles.ecosystem} container`}>
       <div className={styles.ecosystemText}>
@@ -63,37 +68,44 @@ export default function Ecosystem() {
         <div className={styles.ecoImgCoin}>
           <Image src={EcoImgCoin} alt="" />
         </div>
-        {EcosystemCards.map((card, index) => (
-          <div
-            className={`${styles.ecosystemCard} ${
-              styles[`ecosystemCard${index + 1}`]
-            }`}
-            key={index}
-          >
-            <div className={styles.ecoCardTop}>
-              <Socials
-                wrapperClass={styles.ecoCardSoc}
-                stroke="#A5C6E2"
-                links={[
-                  {
-                    name: "ecoSoc",
-                    text: card.number,
-                  },
-                ]}
-              />
+        {EcosystemCards.map((card, index) => {
+          const isActive =
+            activeIndex === index || (activeIndex === null && index === 0);
 
-              <div className={styles.ecoCardYear}>{card.year}</div>
+          return (
+            <div
+              key={index}
+              className={`${styles.ecosystemCard} ${
+                styles[`ecosystemCard${index + 1}`]
+              } ${isActive ? styles.active : ""}`}
+              onMouseEnter={() => setActiveIndex(index)}
+              onMouseLeave={() => setActiveIndex(null)}
+            >
+              <div className={styles.ecoCardTop}>
+                <Socials
+                  enableHover={false}
+                  wrapperClass={styles.ecoCardSoc}
+                  stroke="#A5C6E2"
+                  links={[
+                    {
+                      name: "ecoSoc",
+                      text: card.number,
+                    },
+                  ]}
+                />
+                <div className={styles.ecoCardYear}>{card.year}</div>
+              </div>
+              <div className={styles.ecoCardSubtitles}>
+                {card.subtitles.map((sub, i) => (
+                  <div key={i} className={styles.ecoCardSub}>
+                    <Image width={40} height={40} src={EcoIconSub} alt="" />
+                    {sub.subtitle}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className={styles.ecoCardSubtitles}>
-              {card.subtitles.map((sub, index) => (
-                <div key={index} className={styles.ecoCardSub}>
-                  <Image width={40} height={40} src={EcoIconSub} alt="" />
-                  {sub.subtitle}
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

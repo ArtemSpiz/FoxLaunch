@@ -141,6 +141,12 @@
   display: none;
 }
 
+@media (min-width: 1600px) {
+  .fix {
+    max-height: 900px;
+  }
+}
+
 @media (max-width: 1285px) {
   .fixCard1 {
     bottom: 118px;

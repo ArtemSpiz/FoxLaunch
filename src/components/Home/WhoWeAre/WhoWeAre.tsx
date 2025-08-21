@@ -101,7 +101,7 @@ export default function WhoWeAre() {
           scrub: 1,
           pin: true,
           onUpdate: (self) => {
-            const progress = self.progress; // 0 → 1
+            const progress = self.progress;
             const index = Math.min(
               WhoWeCards.length - 1,
               Math.floor(progress * WhoWeCards.length)
@@ -276,6 +276,7 @@ export default function WhoWeAre() {
           >
             <div className={styles.whoWeCardTop}>
               <Socials
+                enableHover={false}
                 wrapperClass={styles.whoWeCardNum}
                 stroke={
                   activeIndex === index
