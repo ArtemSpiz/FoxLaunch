@@ -69,6 +69,7 @@ const WhoWeCards = [
 
 export default function WhoWeAre() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isBigDesktop, setIsBigDesktop] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -76,6 +77,13 @@ export default function WhoWeAre() {
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setIsBigDesktop(window.innerWidth >= 1600);
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -104,7 +112,7 @@ export default function WhoWeAre() {
       });
 
       gsap.set(cardsRef.current, {
-        width: 223,
+        width: !isBigDesktop ? 300 : 223,
         scaleY: 1,
         borderLeft: "1px solid #676767",
         background: "rgba(25, 35, 43, 0.45)",
@@ -112,7 +120,7 @@ export default function WhoWeAre() {
       });
 
       gsap.set(cardsRef.current[0], {
-        width: 672,
+        width: !isBigDesktop ? 750 : 672,
         scaleY: 1.1,
         border: "1px solid #a5c6e2",
         background:

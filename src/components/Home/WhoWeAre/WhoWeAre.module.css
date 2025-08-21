@@ -121,6 +121,15 @@
   text-transform: lowercase;
 }
 
+@media (min-width: 1600px) {
+  .whoWeCards {
+    margin-inline: auto;
+  }
+  .whoWeCard {
+    height: 450px;
+  }
+}
+
 @media (max-width: 1285px) {
   .whoWeCard {
     overflow: hidden;
@@ -137,12 +146,6 @@
     height: 100%;
     gap: 50px;
     padding: 75px 0 90px 0;
-  }
-}
-
-@media (min-width: 1600px) {
-  .whoWeCards {
-    margin-inline: auto;
   }
 }
 

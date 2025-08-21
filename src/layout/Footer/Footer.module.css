@@ -1,0 +1,92 @@
+.footer {
+  display: flex;
+  padding: 48px;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  background: #000;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.footerLogo {
+  width: 73.6px;
+  height: 32.109px;
+}
+
+.footerLinksWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 64px;
+}
+
+.footerLinks {
+  display: flex;
+  width: 175px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footerLink {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  transition: color 0.5s ease-in-out, transform 0.4s ease;
+  cursor: pointer;
+}
+
+.footerLink:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 1285px) {
+  .footer {
+    padding: 48px 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footerLinksWrapper {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    gap: 40px;
+    padding: 40px 16px;
+    flex-direction: column;
+  }
+
+  .footerLeft {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 640px) {
+  .footerLinksWrapper {
+    flex-direction: column;
+  }
+
+  .footerLinks {
+    width: 100%;
+  }
+}

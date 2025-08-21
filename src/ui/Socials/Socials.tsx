@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import Border from "../Border/Border";
 import styles from "./Socials.module.css";
 import Image, { StaticImageData } from "next/image";
@@ -7,6 +8,7 @@ type SocialLink = {
   icon?: string | StaticImageData;
   iconClass?: string;
   text?: string;
+  component?: ReactNode;
 };
 
 type SocialsProps = {
@@ -25,6 +27,8 @@ export default function Socials({
       {links.map((link, i) => (
         <span className={`${styles.socialIcon} ${wrapperClass}`} key={i}>
           <Border stroke={stroke} />
+
+          {link.component && link.component}
 
           {link.icon && (
             <Image

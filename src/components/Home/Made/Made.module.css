@@ -146,6 +146,13 @@
   letter-spacing: -0.48px;
 }
 
+@media (min-width: 1600px) {
+  .made {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 @media (max-width: 1285px) {
   .madeCard {
     padding: 24px;

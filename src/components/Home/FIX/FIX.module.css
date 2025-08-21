@@ -1,0 +1,294 @@
+.fix {
+  display: flex;
+  padding: 80px 0 108px 0;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+  background: radial-gradient(
+    45.09% 84.81% at 53.3% 61.7%,
+    #12273a 0%,
+    #080808 100%
+  );
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fixTexts {
+  padding: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.fixTitle {
+  color: #fff;
+  max-width: 400px;
+}
+
+.fixSubtitle {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  max-width: 605px;
+}
+
+.fixSubtitle span {
+  color: #fff;
+}
+
+.fixCards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 600px;
+}
+
+.fixCircle {
+  position: relative;
+  max-width: 1058.285px;
+  top: -50px;
+  height: auto;
+  z-index: 2;
+}
+
+.fixCard {
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  position: absolute;
+}
+
+.fixCard1 {
+  bottom: 110px;
+  right: 100px;
+}
+
+.fixCard2 {
+  bottom: 230px;
+  left: 75px;
+}
+
+.fixCard3 {
+  bottom: 350px;
+  left: 65px;
+}
+
+.fixCard4 {
+  top: 40px;
+  left: 37%;
+  transform: translate(-50%);
+}
+
+.fixCard5 {
+  top: 154px;
+  right: 300px;
+}
+
+.fixCard6 {
+  top: 250px;
+  right: 100px;
+}
+
+.fixCardText {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.fixCardTitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 22.5px */
+}
+
+.fixCardTitle2 {
+  max-width: 100px;
+}
+
+.fixCardSubtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+
+.fixSoc {
+  height: 40px !important;
+  width: 40px !important;
+  cursor: auto !important;
+}
+
+.fixCircleBg {
+  display: none;
+  pointer-events: none;
+}
+
+.fixCardsMob {
+  display: none;
+}
+
+@media (max-width: 1285px) {
+  .fixCard1 {
+    bottom: 118px;
+  }
+
+  .fix {
+    padding: 75px 0 90px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fix {
+    padding: 70px 0 80px 0;
+  }
+
+  .fixTitle {
+    width: 300px;
+  }
+  .fixCircle {
+    width: 800px;
+  }
+
+  .fixCard1 {
+    bottom: 150px;
+    right: 50px;
+  }
+
+  .fixCard2 {
+    bottom: 247px;
+    left: 25px;
+  }
+
+  .fixCard3 {
+    bottom: 340px;
+    left: 15px;
+  }
+
+  .fixCard4 {
+    top: 75px;
+    left: 35%;
+    transform: translate(-50%);
+  }
+
+  .fixCard5 {
+    top: 160px;
+    right: 220px;
+  }
+
+  .fixCard6 {
+    top: 234px;
+    right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fix {
+    padding: 60px 0 40px 0;
+    background: radial-gradient(
+      293.96% 114.16% at 0% 0%,
+      #12273a 0%,
+      #080808 100%
+    );
+  }
+
+  .fixCircleBg {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 0;
+  }
+
+  .fix {
+    height: 100%;
+  }
+
+  .fixCircle {
+    top: 0;
+    width: 350.051px;
+  }
+
+  .fixCardText {
+    display: none;
+  }
+
+  .fixCard1 {
+    bottom: 11px;
+    right: auto;
+    left: -3px;
+  }
+
+  .fixCard2 {
+    bottom: 130px;
+    left: -5px;
+  }
+
+  .fixCard3 {
+    bottom: 197px;
+    left: 15px;
+  }
+
+  .fixCard4 {
+    top: -30px;
+    left: 75px;
+    transform: translate(0%);
+  }
+
+  .fixCard5 {
+    top: -40px;
+    right: 150px;
+  }
+
+  .fixCard6 {
+    top: 30px;
+    right: -5px;
+  }
+
+  .fixCardMob {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 18px;
+    padding-left: 16px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+  .fixCardsMob {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .fixCardTitle2 {
+    max-width: none;
+  }
+
+  .fixCardTextMob {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fixMobNum {
+    margin-right: 6px;
+  }
+}

@@ -40,7 +40,7 @@ export default function MadeBlock({
               links={[
                 {
                   name: "MadeCardIcon",
-                  icon: card.icon!,
+                  icon: card.icon,
                 },
               ]}
             />

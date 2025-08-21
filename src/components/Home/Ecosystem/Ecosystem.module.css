@@ -1,0 +1,188 @@
+.ecosystem {
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  overflow: hidden;
+}
+
+.ecosystemText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.ecosystemTitle {
+  color: #080808;
+  max-width: 400px;
+  align-items: start;
+  text-align: start;
+}
+
+.ecosystemSubtitle {
+  color: rgba(8, 8, 8, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+  max-width: 600px;
+}
+
+.ecosystemCards {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  position: relative;
+}
+
+.ecoImgCoin {
+  position: absolute;
+  right: -15px;
+  top: 160px;
+  pointer-events: none;
+}
+
+.ecosystemCard {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 83px;
+  align-self: stretch;
+  border-left: 1px solid #eaeaea;
+  background: transparent;
+}
+
+.ecosystemCard1 {
+  border-left: 1px solid #eaeaea;
+  background: rgba(165, 198, 226, 0.3);
+  width: 442px;
+}
+
+.ecoCardTop {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ecoCardSoc {
+  width: 40px;
+  height: 40px;
+}
+
+.ecoCardYear {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: right;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+.ecoCardSubtitles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.ecoCardSub {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.48px;
+}
+
+.ecoCardSub img {
+  width: 4px;
+  height: 4px;
+}
+
+@media (min-width: 1600px) {
+  .ecosystem {
+    max-width: none;
+  }
+
+  .ecosystemCard {
+    flex: 1 0 0;
+  }
+
+  .ecosystemCard1 {
+    width: 550px;
+    flex: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ecosystemCard {
+    padding: 24px;
+  }
+
+  .ecosystemCard1 {
+    border-left: 1px solid #eaeaea;
+    background: rgba(165, 198, 226, 0.3);
+    width: 300px;
+  }
+
+  .ecosystemText {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .ecosystemTitle {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ecosystemCard {
+    padding: 24px;
+  }
+
+  .ecosystemCard1 {
+    border-left: 1px solid #eaeaea;
+    background: rgba(165, 198, 226, 0.3);
+    width: 100%;
+  }
+
+  .ecosystemCard {
+    border: 1px solid #eaeaea;
+  }
+
+  .ecosystemText {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .ecosystem {
+    gap: 32px;
+  }
+
+  .ecoImgCoin {
+    display: none;
+  }
+
+  .ecosystemTitle {
+    max-width: 300px;
+  }
+
+  .ecosystemCards {
+    flex-direction: column;
+  }
+}

@@ -25,7 +25,7 @@ export default function RightCard({
       <div className={styles.neverCardRContTop}>
         <div className={styles.neverCardRContTitle}>
           <div className={styles.neverCardRContIcon}>
-            <Image src={card.icon} alt="" />
+            <Image width={40} height={40} src={card.icon} alt="" />
           </div>
           {card.title}
         </div>
