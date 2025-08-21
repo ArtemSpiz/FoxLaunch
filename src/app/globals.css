@@ -50,6 +50,10 @@ button {
   line-height: 107%; /* 40.66px */
 }
 
+.heroContainer {
+  padding: 80px 48px 48px 48px;
+}
+
 @media (max-width: 1285px) {
   .container {
     padding: 70px 48px;
@@ -65,12 +69,24 @@ button {
     padding: 60px 20px;
   }
 
+  .heroContainer {
+    padding: 80px 20px 20px 20px;
+  }
+
   .title {
     font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
+  .heroContainer {
+    padding: 80px 0px 0px 0px;
+  }
+
+  .heroContainerMob {
+    padding: 0px 16px 16px 16px;
+  }
+
   .container {
     padding: 40px 16px;
   }

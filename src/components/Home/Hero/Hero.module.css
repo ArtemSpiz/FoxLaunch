@@ -183,7 +183,9 @@
   .progressCardRaised {
     font-size: 14px;
   }
+}
 
+@media (max-width: 1024px) {
   .hero {
     padding: 80px 20px 20px 20px;
   }

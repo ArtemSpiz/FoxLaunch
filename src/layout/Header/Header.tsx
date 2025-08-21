@@ -5,12 +5,13 @@ import ArrowBtn from "../../assets/svg/ArrowBtn.svg";
 import Burger from "@/src/assets/svg/Burger.svg";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const HeaderLinks = [
-  { title: "Features" },
-  { title: "Pricing" },
-  { title: "Security" },
-  { title: "About" },
+  { title: "Features", href: "/features" },
+  { title: "Pricing", href: "/pricing" },
+  { title: "Security", href: "/security" },
+  { title: "About", href: "/about" },
 ];
 
 export default function Header() {
@@ -18,13 +19,15 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
-      <div className={styles.headerLogo}>Ffx</div>
+      <Link href="/" className={styles.headerLogo}>
+        Ffx
+      </Link>
 
       <div className={styles.headerLinks}>
         {HeaderLinks.map((link, index) => (
-          <div className={styles.headerLink} key={index}>
+          <Link href={link.href} className={styles.headerLink} key={index}>
             {link.title}
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -42,9 +45,14 @@ export default function Header() {
         <div className={styles.headerBurgerMenu}>
           <div className={styles.headerLinksMob}>
             {HeaderLinks.map((link, index) => (
-              <div className={styles.headerLink} key={index}>
+              <Link
+                href={link.href}
+                key={index}
+                className={styles.headerLink}
+                onClick={() => setIsOpen(false)}
+              >
                 {link.title}
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -10,9 +10,9 @@ import Footer from "../layout/Footer/Footer";
 import Header from "../layout/Header/Header";
 import styles from "../app/page.module.css";
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className={styles.page}>
+    <div className={styles.Home}>
       <Header />
       <Hero />
       <Made />

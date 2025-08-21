@@ -1,0 +1,571 @@
+.heroPresaleWrapper {
+  background: linear-gradient(0deg, #080808 0%, #080808 100%), #010203;
+}
+
+.heroPresale {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 253px);
+  background-image: url("../../../assets/img/heroPresaleBg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.heroPresCont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 48px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.heroPresaleGrid1 {
+  grid-area: 1 / 1 / 2 / 2;
+  border-right: 1px solid #676767;
+  min-width: 450px;
+}
+
+.title {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 44px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 107%; /* 47.08px */
+}
+
+.heroPresaleGrid2 {
+  grid-area: 2 / 1 / 4 / 3;
+  gap: 36px;
+  flex-direction: column;
+  border: 1px solid #676767;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.group {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-top: 1px solid rgba(104, 103, 103, 0.4);
+  border-bottom: 1px solid rgba(104, 103, 103, 0.4);
+}
+
+.groupName {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 25px */
+}
+
+.bonus {
+  display: flex;
+  height: 30px;
+  padding: 0px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #dee8f1;
+
+  color: #000;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.64px;
+}
+
+.range {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  width: 380px;
+}
+
+.range span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.note {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: -0.28px;
+  max-width: 757px;
+}
+
+.heroPresaleGrid3 {
+  border-right: 1px solid #676767;
+  border-bottom: 1px solid #676767;
+  border-left: 1px solid #676767;
+  grid-area: 1 / 3 / 4 / 4;
+}
+
+.grid3Card {
+  display: flex;
+  padding: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  height: calc(100% - 72px);
+  align-self: stretch;
+  background: #dee8f1;
+  backdrop-filter: blur(5.949999809265137px);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.tab {
+  cursor: pointer;
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex: 1 0 0;
+
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.tab.active {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.tabIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.tabIcon.active path {
+  stroke: #000;
+}
+
+.cardBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.cardTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardTitle {
+  color: #000;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 35px */
+}
+
+.cardSubtitle {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+}
+
+.cardBuyBot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cardLine {
+  width: 100%;
+  height: auto;
+}
+
+.cardText {
+  display: flex;
+  justify-content: space-between;
+  color: #010203;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+  width: 100%;
+}
+
+.cardText span span {
+  font-size: 12px;
+}
+
+.cardInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.cardInputsTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: rgba(0, 0, 0, 0.45);
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 17.5px */
+}
+
+.cardInputsTitle img {
+  width: 16px;
+  height: 16px;
+}
+
+.cardInput {
+  display: flex;
+  max-height: 70px;
+  padding: 16px 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(165, 198, 226, 0.2);
+}
+
+.cardInput span {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "DM Sans";
+}
+
+.cardInpTexts {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardInputsDrop {
+  display: flex;
+  padding: 7px 10px;
+  align-items: flex-start;
+  gap: 8px;
+
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.cardInputsDrop img {
+  width: 24px;
+  height: 24px;
+}
+
+.cardInputsDropTitle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 17.5px */
+}
+
+.cardInputsDropTitle span {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 17.5px */
+}
+
+.cardBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.learnBtn {
+  border: none;
+  display: flex;
+  padding: 21px 16px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background: #fff;
+
+  color: #010302;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+}
+
+.howToBuy {
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: -0.32px;
+}
+
+.noteMob {
+  display: none;
+}
+
+.leaderboard {
+  padding-block: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: -0.36px;
+}
+
+.leaderboard img {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1285px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .heroPresaleGrid1 {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .note {
+    display: none;
+  }
+
+  .noteMob {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: "IBM Plex Mono";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: -0.28px;
+    margin-top: 24px;
+    padding-inline: 16px;
+  }
+
+  .grid3Card {
+    height: calc(100% - 192px);
+    padding: 30px;
+  }
+
+  .groupName {
+    font-size: 18px;
+  }
+
+  .group {
+    border-top: 0;
+    padding: 12px 0px;
+  }
+
+  .group:nth-child(5) {
+    border-bottom: 0;
+  }
+
+  .heroPresCont {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroPresCont {
+    padding: 24px 20px;
+  }
+
+  .grid3Card {
+    padding: 24px 20px;
+  }
+
+  .range {
+    font-size: 16px;
+    width: auto;
+  }
+
+  .heroPresaleGrid1 {
+    min-width: 0;
+  }
+
+  .groups {
+    justify-content: space-between;
+  }
+
+  .group {
+    padding: 10px 0px;
+  }
+
+  .title {
+    font-size: 35px;
+  }
+  .cardText {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+  .range {
+    font-size: 14px;
+  }
+
+  .grid3Card {
+    gap: 36px;
+    padding: 18px 16px;
+  }
+
+  .tab {
+    padding: 8px 0px;
+  }
+
+  .group {
+    padding: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .group:nth-child(1) {
+    padding-top: 0px;
+  }
+
+  .group:nth-child(5) {
+    padding-bottom: 0px;
+  }
+
+  .howToBuy {
+    font-size: 14px;
+  }
+
+  .heroPresaleGrid3,
+  .heroPresaleGrid2,
+  .heroPresaleGrid1 {
+    border: none;
+  }
+
+  .learnBtn {
+    max-height: 42px;
+    padding: 12px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+    letter-spacing: -0.28px;
+  }
+
+  .noteMob {
+    padding: 0;
+  }
+
+  .leaderboard {
+    margin-top: 24px;
+    display: flex;
+    height: 55px;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    border: 1px solid #676767;
+    cursor: pointer;
+  }
+
+  .cardInput {
+    padding: 16px 12px;
+    max-height: none;
+  }
+
+  .heroPresCont {
+    padding: 0;
+    justify-content: start;
+    align-items: start;
+  }
+
+  .heroPresale {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    background: radial-gradient(
+      293.96% 114.16% at 0% 0%,
+      #12273a 0%,
+      #080808 100%
+    );
+    padding-top: 40px;
+  }
+
+  .heroPresaleGrid2 {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 20px;
+  }
+}
