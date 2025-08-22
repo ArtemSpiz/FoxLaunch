@@ -1,0 +1,328 @@
+.breakdown {
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
+  position: relative;
+  max-width: none;
+}
+
+.breakdownText {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  color: #080808;
+}
+
+.iconsCard,
+.iconsSubtitle {
+  width: 40px;
+  height: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 340px);
+  position: relative;
+}
+
+.cardsCoin {
+  position: absolute;
+  right: 0;
+  top: 400px;
+  width: 341.672px;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: 1px solid #eaeaea;
+  position: relative;
+}
+
+.card1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.card2 {
+  grid-area: 1 / 3 / 2 / 5;
+  background: rgba(165, 198, 226, 0.3);
+}
+
+.card3 {
+  grid-area: 1 / 5 / 2 / 7;
+}
+
+.card4 {
+  grid-area: 2 / 1 / 3 / 4;
+}
+
+.card5 {
+  grid-area: 2 / 4 / 3 / 7;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.cardTitle {
+  color: #000;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+.cardContentTable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  align-self: stretch;
+}
+
+.cardContentTable:nth-child(1) {
+  padding-top: 0px;
+}
+
+.cardContentTable:nth-child(5) {
+  padding-bottom: 0px;
+}
+
+.cardTableLine {
+  padding-bottom: 16px;
+  padding-top: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 22.5px */
+  letter-spacing: -1.26px;
+}
+
+.cardTableLine span {
+  color: #000;
+}
+
+.cardContentDesc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardDescInvestors {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.cardInvestor {
+  display: flex;
+  height: 42px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.cardInvestor.active {
+  background: rgba(247, 247, 247, 0.01);
+  box-shadow: 0 0 24px 0 rgba(165, 198, 226, 0.4);
+  margin-top: 15px;
+}
+
+.cardInvestorWrap {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 12px;
+  flex-shrink: 0;
+  padding: 0px 8.416px;
+}
+
+.cardInvestorImg {
+  width: 32.837px;
+  height: 32.837px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cardInvestorImg.active {
+  width: 51.377px;
+  height: 51.377px;
+}
+
+.cardInvestorDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.052px;
+}
+
+.cardInvestorName {
+  color: #000;
+  font-family: "IBM Plex Mono";
+  font-size: 12.313px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 15.391px */
+}
+
+.cardInvestorName.active {
+  font-size: 19.266px;
+}
+
+.cardInvestorFunded {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "IBM Plex Mono";
+  font-size: 10.944px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 13.681px */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cardInvestorFunded span {
+  color: #39a1ff;
+}
+
+.cardInvestorFunded.active {
+  font-size: 17.126px;
+}
+
+.borderBottom {
+  rotate: 180deg;
+}
+
+.cardDescText {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.48px;
+}
+
+.cardDescText5 {
+  max-width: 302px;
+}
+
+.Glow {
+  display: none;
+}
+
+@media (max-width: 1285px) {
+  .cardInvestorImg.active {
+    width: 41.377px;
+    height: 41.377px;
+  }
+
+  .cardInvestorFunded.active {
+    font-size: 13.126px;
+  }
+
+  .cardInvestorName.active {
+    font-size: 17.266px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardTableLine {
+    font-size: 16px;
+  }
+
+  .card {
+    padding: 24px;
+    gap: 48px;
+  }
+
+  .cardDescInvestors {
+    display: none;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cardsCoin {
+    right: -20px;
+    width: 226px;
+    top: auto;
+    bottom: 50px;
+    height: auto;
+  }
+
+  .Glow {
+    position: absolute;
+    left: 0;
+    top: 70%;
+    transform: translate(0, -50%);
+    display: flex;
+  }
+
+  .cardDescText5 {
+    max-width: none;
+  }
+  .breakdown {
+    gap: 38px;
+  }
+
+  .title {
+    text-align: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconsSubtitle {
+    display: none;
+  }
+  .breakdown {
+    gap: 28px;
+  }
+
+  .card {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardsCoin {
+    bottom: 110px;
+  }
+}
