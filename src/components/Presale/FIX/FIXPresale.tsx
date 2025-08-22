@@ -12,19 +12,19 @@ import { useEffect, useState } from "react";
 
 const fixPresaleCards = [
   {
-    number: "01",
+    number: "1",
     title: "Set Up Your Wallet",
     subtitle:
       "Download and install a compatible wallet like MetaMask. Create your account and make sure to back up your seed phrase securely",
   },
   {
-    number: "02",
+    number: "2",
     title: "Fund Your Wallet",
     subtitle:
       "Transfer ETH, BNB, or USDT to your wallet. These will be used to buy $FIX tokens during the presale",
   },
   {
-    number: "03",
+    number: "3",
     title: "Buy $FIX Tokens",
     subtitle:
       "Connect your wallet to our Presale Dashboard and follow the instructions to purchase your tokens",
@@ -56,7 +56,7 @@ export default function FIXPresale() {
 
       <div className={styles.fixPresaleCards}>
         <div className={styles.cardsImage}>
-          <Image src={isMobile ? fixPresaleGlowMob : fixPresaleImg} alt="" />
+          <Image src={isMobile ? fixPresaleImgMob : fixPresaleImg} alt="" />
         </div>
 
         {fixPresaleCards.map((card, index) => (
@@ -76,7 +76,6 @@ export default function FIXPresale() {
                   text: card.number,
                 },
               ]}
-              enableHover={false}
             />
           </div>
         ))}
@@ -97,9 +96,13 @@ export default function FIXPresale() {
                 ]}
                 enableHover={false}
               />
-              <div className={styles.cardTitle}>{card.title}</div>
+              <div className={`${styles.cardTitle} ${styles.cardTitleMob} `}>
+                {card.title}
+              </div>
             </div>
-            <div className={styles.cardSubtitle}>{card.subtitle}</div>
+            <div className={`${styles.cardSubtitle} ${styles.cardSubtitleMob} `}>
+              {card.subtitle}
+            </div>
           </div>
         ))}
       </div>

@@ -14,6 +14,7 @@
 }
 
 .fixPresaleText {
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +47,7 @@
   justify-content: center;
   width: 100%;
   top: -90px;
+  width: 700px;
 }
 
 .cardsImage {
@@ -65,18 +67,18 @@
 }
 
 .card1 {
-  left: 295px;
+  left: -60px;
   top: 105px;
 }
 
 .card2 {
-  left: 49%;
-  transform: translate(-49%, 0);
+  left: 50%;
+  transform: translate(-55%, 0);
   bottom: -85px;
 }
 
 .card3 {
-  right: 250px;
+  right: -100px;
   bottom: -33px;
 }
 
@@ -118,16 +120,134 @@
   .fixPresale {
     padding: 75px 0 90px 0;
   }
+
+  .fixPresaleTitle {
+    max-width: 350px;
+  }
 }
 
 @media (max-width: 1024px) {
+  .fixPresaleTitle {
+    max-width: 300px;
+  }
+
   .fixPresale {
     padding: 70px 0 80px 0;
+  }
+
+  .fixPresaleCards {
+    width: 600px;
+  }
+
+  .cardsImage {
+    max-width: 422.5px;
+  }
+
+  .card1 {
+    left: -70px;
+    top: 113px;
+  }
+
+  .card2 {
+    left: 50%;
+    transform: translate(-55%, 0);
+    bottom: -90px;
+  }
+
+  .card3 {
+    right: -70px;
+    bottom: -25px;
+  }
+
+  .card {
+    max-width: 200px;
   }
 }
 
 @media (max-width: 768px) {
   .fixPresale {
     padding: 60px 0 40px 0;
+  }
+
+  .fix {
+    gap: 36px;
+  }
+
+  .glow {
+    right: auto;
+    left: 0;
+  }
+
+  .cardsImage {
+    max-width: 326px;
+    height: auto;
+  }
+
+  .fixPresaleCards {
+    height: auto;
+    top: -55px;
+  }
+
+  .cardSubtitle,
+  .cardTitle {
+    display: none;
+  }
+
+  .cardNum {
+    display: flex;
+  }
+
+  .card1 {
+    left: 154px;
+    top: 157px;
+  }
+
+  .card2 {
+    left: 39%;
+    transform: translate(-50%, 0);
+    bottom: auto;
+    top: 40px;
+  }
+
+  .card3 {
+    right: 140px;
+    bottom: 30px;
+  }
+
+  .cardsWrapperMob {
+    display: flex;
+    padding: 0px 16px;
+    flex-direction: column;
+    width: 100%;
+    margin-top: -100px;
+  }
+
+  .cardMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .cardsWrapperMob:nth-child(3) {
+    padding-bottom: 0px;
+  }
+
+  .cardTop {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .cardSubtitleMob,
+  .cardTitleMob {
+    display: flex;
+  }
+
+  .cardSubtitle {
+    max-width: 238px;
   }
 }
