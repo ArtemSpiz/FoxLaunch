@@ -6,6 +6,7 @@ import styles from "../page.module.css";
 import Breakdown from "@/src/components/Presale/Breakdown/Breakdown";
 import FIXPresale from "@/src/components/Presale/FIX/FIXPresale";
 import MetaMask from "@/src/components/Presale/MetaMask/MetaMask";
+import Contributors from "@/src/components/Presale/Contributors/Contributors";
 
 export default function Features() {
   return (
@@ -15,6 +16,7 @@ export default function Features() {
       <Breakdown />
       <FIXPresale />
       <MetaMask />
+      <Contributors />
       <Trouble />
       <Footer />
     </div>

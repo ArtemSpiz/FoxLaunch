@@ -11,6 +11,7 @@
     #080808 100%
   );
   position: relative;
+  height: 100vh;
 }
 
 .fixPresaleText {
@@ -74,7 +75,7 @@
 .card2 {
   left: 50%;
   transform: translate(-55%, 0);
-  bottom: -85px;
+  bottom: -90px;
 }
 
 .card3 {
@@ -112,7 +113,7 @@
 
 @media (min-width: 1600px) {
   .fixPresale {
-    max-height: 900px;
+    max-height: 1000px;
   }
 }
 
@@ -133,6 +134,7 @@
 
   .fixPresale {
     padding: 70px 0 80px 0;
+    height: 100%;
   }
 
   .fixPresaleCards {
