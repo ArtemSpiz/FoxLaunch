@@ -5,6 +5,7 @@ export default function Border({
   width = 7,
   height = 7,
   classBorder = "",
+  strokeWidth = 1,
 }) {
   return (
     <div className={`${styles.borderWrapper} ${classBorder}`}>
@@ -13,10 +14,15 @@ export default function Border({
           xmlns="http://www.w3.org/2000/svg"
           width={width}
           height={height}
-          viewBox="0 0 7 7"
+          viewBox={`0 0 ${width} ${height}`}
           fill="none"
         >
-          <path d="M7 1H1V7" stroke={stroke} strokeLinejoin="bevel" />
+          <path
+            d={`M${width} 1H1V${height}`}
+            stroke={stroke}
+            strokeLinejoin="bevel"
+            strokeWidth={strokeWidth}
+          />
         </svg>
       </div>
       <div>
@@ -24,13 +30,14 @@ export default function Border({
           xmlns="http://www.w3.org/2000/svg"
           width={width}
           height={height}
-          viewBox="0 0 7 7"
+          viewBox={`0 0 ${width} ${height}`}
           fill="none"
         >
           <path
-            d="M-2.38419e-07 1H6V7"
+            d={`M0 1H${width - 1}V${height}`}
             stroke={stroke}
             strokeLinejoin="bevel"
+            strokeWidth={strokeWidth}
           />
         </svg>
       </div>
