@@ -111,7 +111,7 @@ export default function Breakdown() {
             <div className={styles.cardTop}>
               <Socials
                 enableHover={false}
-                wrapperClass={styles.iconsSubtitle}
+                wrapperClass={styles.iconsCard}
                 links={[{ name: card.icon, icon: card.icon }]}
                 stroke="#A5C6E2"
               />
