@@ -1,0 +1,474 @@
+.estimate {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  background: #f7f7f7;
+  max-width: none;
+}
+
+.estimateGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 250px 340px;
+}
+
+.estimateGridCard {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #eaeaea;
+  align-self: stretch;
+}
+
+.estimateGridCard:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+  justify-content: space-between;
+}
+
+.estimateGridCard:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-content: center;
+}
+
+.estimateGridCard:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.estimateGridCard:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+  justify-content: space-between;
+}
+
+.estimateTitle {
+  color: #080808;
+  text-align: start;
+}
+
+.estimateSubtitle {
+  color: rgba(8, 8, 8, 0.4);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+}
+
+.estimateSubtitleMob {
+  display: none;
+}
+
+.estimateGridCardImg {
+  width: 266px;
+  height: auto;
+}
+
+.cardSubsTitle {
+  color: #000;
+  font-family: "IBM Plex Mono";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+
+.cardSubtitles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  align-self: stretch;
+}
+
+.cardSub {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.cardSubIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.cardSubTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.cardSubTitle {
+  color: #1f1f1f;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 22.5px */
+}
+
+.cardSubSubtitle {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+}
+
+.cardRight {
+  display: flex;
+  flex: 1 0 0;
+  max-width: 450px;
+  min-width: 370px;
+  align-self: stretch;
+  padding: 48px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: #dee8f1;
+  backdrop-filter: blur(5.949999809265137px);
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  align-self: stretch;
+}
+
+.cardTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardTitle {
+  color: #000;
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 35px */
+}
+
+.cardSubtitle {
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  max-width: 324px;
+}
+
+.cardInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.inputWrapper {
+  display: flex;
+  max-height: 70px;
+  padding: 16px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  width: 100%;
+}
+
+.inputTitle {
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 17.5px */
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+  outline: none;
+}
+
+.input::placeholder {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+}
+
+.inputAmount {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+}
+
+.cardBot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.cardRightContent {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.cardRightCol {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-right: 1px solid rgba(0, 17, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  color: rgba(1, 3, 2, 0.4);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+}
+
+.cardRightCol:nth-child(1) {
+  padding-left: 0px;
+}
+
+.cardRightCol:last-child {
+  padding-right: 0px;
+  border-right: none;
+}
+
+.cardRightCol span {
+  color: #010302;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 20px */
+}
+
+.cardInpRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.1);
+  outline: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardInpRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #39a1ff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  box-shadow: -100vw 0 0 100vw #000;
+  border: 2px solid #000;
+  background-image: url("../../../assets/img/rangeEstCircle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.cardInpRange::-moz-range-progress {
+  background: #000;
+  height: 28px;
+  border-radius: 0 32px 32px 0;
+}
+
+.cardInpRange::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #39a1ff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  background-image: url("../../../assets/img/rangeEstCircle.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@media (min-width: 1600px) {
+  .cardRight {
+    max-width: none;
+    width: 700px;
+  }
+
+  .estimateGrid {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .estimateGridCard {
+    padding: 30px;
+  }
+
+  .cardRight {
+    padding: 30px;
+  }
+
+  .cardSubTitle,
+  .cardSubsTitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .estimateGridCard {
+    padding: 26px;
+  }
+
+  .cardRight {
+    padding: 24px;
+  }
+
+  .estimateGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .estimateGridCard:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 3;
+    justify-content: space-between;
+  }
+
+  .estimateSubtitleMob {
+    display: flex;
+  }
+
+  .estimateGridCard:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-content: center;
+    display: none;
+  }
+
+  .estimateGridCard:nth-child(3) {
+    display: none;
+  }
+
+  .estimateGridCard:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 3;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .cardRightContent {
+    flex-direction: column;
+  }
+
+  .cardRightCol {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 17, 0, 0.19);
+    border-right: none;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0px;
+    padding-left: 0px;
+    font-size: 14px;
+    align-items: flex-end;
+  }
+
+  .cardRightCol:nth-child(1) {
+    padding-top: 0px;
+  }
+
+  .cardRightCol:last-child {
+    padding-bottom: 0px;
+    border-bottom: none;
+  }
+
+  .cardTop {
+    gap: 35px;
+  }
+
+  .cardBot {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .estimateGridCard {
+    padding: 24px;
+  }
+
+  .estimateGridCard:nth-child(1) {
+    border: none;
+    padding: 0;
+    gap: 18px;
+  }
+
+  .estimateSubtitle {
+    padding-bottom: 6px;
+  }
+
+  .estimateGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .estimate {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .inputWrapper {
+    padding: 12px 20px;
+  }
+
+  .cardTop {
+    gap: 24px;
+  }
+
+  .cardRight {
+    gap: 48px;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    padding: 24px 20px;
+  }
+}
