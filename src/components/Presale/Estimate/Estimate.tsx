@@ -91,6 +91,13 @@ export default function Estimate() {
     return value.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
+  const handleInputFocus = () => {
+    if (bdagAmount === "5,255,460") {
+      setBdagAmount("");
+      setUsdAmount("$0");
+    }
+  };
+
   return (
     <div className={`${styles.estimate} container`}>
       <div className={styles.estimateGrid}>
@@ -162,7 +169,8 @@ export default function Estimate() {
                 className={styles.input}
                 value={formatInputValue(bdagAmount)}
                 onChange={handleBdagChange}
-              />{" "}
+                onFocus={handleInputFocus}
+              />
             </div>
             <div className={styles.inputWrapper}>
               <div className={styles.inputTitle}>USD Amount</div>

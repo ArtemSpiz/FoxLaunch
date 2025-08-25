@@ -5,6 +5,8 @@
   align-items: center;
   gap: 96px;
   position: relative;
+  max-width: 1600px;
+  margin-inline: auto;
 }
 
 .texts {
@@ -160,19 +162,19 @@
     display: none;
   }
 
-  .rightCont{
+  .rightCont {
     gap: 18px;
   }
 
-  .btn{
+  .btn {
     margin-top: 14px;
   }
 
-  .subContent{
+  .subContent {
     font-size: 14px;
   }
 
-  .subtitles{
+  .subtitles {
     gap: 24px;
   }
 }
