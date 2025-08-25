@@ -5,24 +5,25 @@ import Socials from "@/src/ui/Socials/Socials";
 import snapchat from "../../assets/svg/Snapchat.svg";
 import facebook from "../../assets/svg/Facebook.svg";
 import youtube from "../../assets/svg/Youtube.svg";
+import Link from "next/link";
 
 const FooterLinks = [
   {
     links: [
-      { link: "FAQ’s" },
-      { link: "Press and Media" },
-      { link: "Security and Compliance" },
-      { link: "Legal Disclaimers" },
-      { link: "Presale Calculator" },
+      { link: "FAQ’s", href: "/faq" },
+      { link: "Press and Media", href: "/press_and_media" },
+      { link: "Security and Compliance", href: "/security" },
+      { link: "Legal Disclaimers", href: "/legal_disclaimers" },
+      { link: "Presale Calculator", href: "/presale" },
     ],
   },
   {
     links: [
-      { link: "Press Kit" },
-      { link: "Our Vision" },
-      { link: "News Articles" },
-      { link: "Private Client Contact Us" },
-      { link: "Prop Challenges" },
+      { link: "Press Kit", href: "/press-kit" },
+      { link: "Our Vision", href: "/our-vision" },
+      { link: "News Articles", href: "/news-articles" },
+      { link: "Private Client Contact Us", href: "/contact-private-client" },
+      { link: "Prop Challenges", href: "/prop-challenges" },
     ],
   },
 ];
@@ -57,9 +58,9 @@ export default function Footer() {
         {FooterLinks.map((linkCol, index) => (
           <div className={styles.footerLinks} key={index}>
             {linkCol.links.map((link, i) => (
-              <a className={styles.footerLink} key={i}>
+              <Link href={link.href} className={styles.footerLink} key={i}>
                 {link.link}
-              </a>
+              </Link>
             ))}
           </div>
         ))}

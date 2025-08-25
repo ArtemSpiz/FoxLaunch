@@ -168,10 +168,12 @@
 .tabIcon {
   width: 20px;
   height: 20px;
+  transition: all 0.4s ease-in-out;
+  filter: none;
 }
 
-.tabIcon.active path {
-  stroke: #000;
+.tabIcon.active {
+  filter: brightness(0) saturate(100%);
 }
 
 .cardBuy {
