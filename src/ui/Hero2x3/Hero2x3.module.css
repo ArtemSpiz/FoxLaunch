@@ -374,6 +374,21 @@
   letter-spacing: -0.48px;
 }
 
+@media (min-width: 1600px) {
+  .hero2x3 {
+    height: calc(100vh - 280px);
+  }
+
+  .grid {
+    height: 100%;
+  }
+
+  .cardsWrapper {
+    height: 100%;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 1285px) {
   .heroTitle {
     font-size: 40px;

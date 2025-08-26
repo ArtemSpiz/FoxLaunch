@@ -73,7 +73,7 @@ export default function Legal() {
         }}
         cards={{
           enabled: true,
-          type: "1", // або "2", якщо треба
+          type: "1",
           imageClass: "imageType4",
           cardClass: styles.legalCard,
           data: PressCards,

@@ -1,0 +1,560 @@
+.cryptoHero {
+  background: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top {
+  border: 1px solid #676767;
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+}
+
+.glow {
+  width: 841.698px;
+  height: 485.786px;
+  position: absolute;
+  left: 0;
+  z-index: 4;
+  pointer-events: none;
+  top: 0;
+}
+
+.titleWrapper {
+  display: flex;
+  padding: 56px;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  display: flex;
+  flex: 1 0 0;
+  align-items: flex-start;
+  align-self: stretch;
+  z-index: 3;
+}
+
+.title {
+  color: #fff;
+  text-align: start;
+}
+
+.platforms {
+  max-width: 100px;
+}
+
+.void {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border: 1px solid #676767;
+  border-right: none;
+  align-self: stretch;
+  z-index: 3;
+}
+
+.text {
+  display: flex;
+  padding: 56px;
+  z-index: 3;
+
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border: 1px solid #676767;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: -0.48px;
+}
+
+.wrapperBtns {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 56px;
+}
+
+.btn1 {
+  display: flex;
+  height: 32px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+  transition: all 0.4s ease-in-out, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -105%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+.btn1:hover::before {
+  left: 100%;
+}
+
+.btn1:hover {
+  transform: scale(1.05);
+}
+
+.btn2 {
+  display: flex;
+  height: 32px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background: #fff;
+  border: none;
+  color: #080808;
+  font-family: "IBM Plex Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out, transform 0.2s ease;
+}
+
+.btn2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -105%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.3)
+  );
+  transform: skewX(-20deg);
+  transition: all 0.5s ease;
+}
+
+.btn2:hover::before {
+  left: 100%;
+}
+
+.btn2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn2 img {
+  transition: all 0.5s ease;
+  height: auto;
+  width: auto;
+}
+
+.btn2:hover img {
+  transform: translate(4px, -4px);
+}
+.gridTableWrapper {
+  z-index: 5;
+  width: 100%;
+}
+
+.gridTable {
+  display: grid;
+  grid-template-columns: 448px repeat(3, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 140%;
+  width: 100%;
+  z-index: 4;
+}
+
+.gridHeader {
+  padding: 30px 10px 25px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.gridHeader:last-child {
+  border-right: none;
+}
+
+.gridHeaderEmpty {
+  padding: 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tableText {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  white-space: nowrap;
+}
+
+.gridRow {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.gridCell {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridCell:last-child {
+  border-right: none;
+}
+
+/* Remove bottom border from last row */
+.gridTable > div:nth-last-child(-n + 4) {
+  border-bottom: none;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1285px) {
+  .text,
+  .titleWrapper {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gridTable {
+    grid-template-columns: 250px repeat(3, 1fr);
+  }
+
+  .text,
+  .titleWrapper {
+    padding: 32px;
+  }
+
+  .wrapperBtns {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    position: initial;
+    flex-direction: column;
+    border: none;
+  }
+
+  .cryptoHero {
+    position: relative;
+  }
+
+  .void {
+    display: none;
+  }
+
+  .text {
+    padding: 40px 16px;
+    border: 1px solid #676767;
+    font-size: 14px;
+  }
+
+  .titleWrapper {
+    padding: 24px 18px;
+    border: 1px solid rgba(234, 234, 234, 0.1);
+  }
+
+  .tableText {
+    font-size: 16px;
+  }
+
+  .gridTable {
+    border: 1px solid rgba(234, 234, 234, 0.1);
+    grid-template-columns: 185px repeat(3, 1fr);
+    min-width: 768px;
+  }
+
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cryptoHero {
+    padding: 80px 16px 0px 16px;
+  }
+
+  .gridTableWrapper {
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .wrapperBtns {
+    padding-top: 32px;
+  }
+
+  .glow {
+    display: none;
+  }
+}
+
+/* === Trading Rules Table === */
+.rulesTableWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.47) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-blend-mode: plus-darker;
+  backdrop-filter: blur(10px);
+  font-family: "IBM Plex Mono";
+  min-width: 768px;
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+/* Заголовок таблиці */
+.rulesHeader {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rulesHeaderEmpty {
+  padding: 16px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rulesHeaderCell {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  color: #a5c6e2;
+  font-family: "IBM Plex Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 28px */
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 110px;
+}
+
+.rulesHeaderCell span {
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+}
+
+.rulesHeaderCell:nth-child(4) {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Рядок */
+.rulesRow {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rulesTitle {
+  padding: 10px 20px 10px 30px;
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+
+.rulesCell {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Опис при відкритті */
+.rulesDescription {
+  grid-column: 1 / span 4;
+  background: rgba(217, 217, 217, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  padding: 20px 30px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.wrapperBtns {
+  display: flex;
+  gap: 12px;
+}
+
+.headerLogInBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.headerLogInBtn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.headerWhiteBtn {
+  background: #fff;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.headerWhiteBtn:hover {
+  background: #ddd;
+}
+
+@media (max-width: 1024px) {
+  .rulesTableWrapper {
+    min-width: 850px;
+    overflow: auto;
+  }
+
+  .rulesHeaderCell {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .rulesTitle {
+    font-size: 16px;
+    padding: 10px 20px 10px 30px;
+  }
+
+  .arrow {
+    width: 14.142px;
+    height: 7.071px;
+  }
+
+  .top {
+    height: 100%;
+  }
+}
+
+.bgVideoCrypto video {
+  object-position: top !important;
+}

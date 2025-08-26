@@ -26,6 +26,73 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  position: relative;
+}
+
+.headerLinksOpenWrapper {
+  max-height: 100px;
+  transition: all 0.35s cubic-bezier(1, 1, 1, 1);
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 26px);
+  background: linear-gradient(148deg, rgba(0, 0, 0, 0) 52.69%, #39a1ff 100%),
+    rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.headerLinksOpenWrapper.open {
+  pointer-events: all;
+  max-height: 363px;
+  opacity: 1;
+}
+
+.headerLinksOpen {
+  display: flex;
+  width: 308px;
+  height: 363px;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 20px 0 rgba(57, 161, 255, 0.2);
+  backdrop-filter: blur(10px);
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.headerLinksOpenLink {
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+
+  color: #fff;
+  font-family: "IBM Plex Mono";
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.28px;
+  line-height: 100%;
+  pointer-events: all;
+
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.headerLinksOpenLink:hover {
+  background: rgba(57, 161, 255, 0.15);
+}
+
+.headerLinksOpenLink span {
+  transition: all 0.3s ease;
+}
+
+.headerLinksOpenLink:hover span {
+  transition: all 0.3s ease;
+  transform: translate(5px, -1px);
 }
 
 .headerLink {
@@ -41,6 +108,8 @@
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 8px 0;
   cursor: pointer;
+  display: flex;
+  gap: 4px;
 }
 
 .headerLink::before {
@@ -83,6 +152,16 @@
   color: #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   transform: translateY(-1px);
+}
+
+.arrowIcon {
+  width: 7px;
+  height: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrowIcon.open {
+  transform: rotate(-180deg) translate(0px, -8px);
 }
 
 .headerBtns {
