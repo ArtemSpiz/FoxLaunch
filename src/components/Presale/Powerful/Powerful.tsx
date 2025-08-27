@@ -38,7 +38,7 @@ export default function Powerful() {
               <Border stroke="#A5C6E2" />
               <div className={styles.subContent}>
                 <div className={styles.icon}>
-                  <Image src={Plus} alt="" />
+                  <Image src={Plus} alt="image" />
                 </div>
                 {sub.title}
               </div>
@@ -52,7 +52,7 @@ export default function Powerful() {
 
       <div className={styles.bottomCont}>
         <div className={styles.image}>
-          <Image src={Coin} alt="" />
+          <Image src={Coin} alt="image" />
         </div>
 
         <div className={styles.rightCont}>

@@ -16,6 +16,7 @@ import Border from "@/src/ui/Border/Border";
 import BreakdownCoinMob from "../../../assets/img/BreakdownCoinMob.png";
 import { useEffect, useState } from "react";
 import BreakGlow from "../../../assets/svg/BreakGlow.svg";
+import BreakdownGlowDesk from "@/src/assets/img/BreakdownGlow.png";
 
 const BreakdownCards = [
   {
@@ -98,10 +99,16 @@ export default function Breakdown() {
 
       <div className={styles.cards}>
         <div className={styles.Glow}>
-          <Image src={BreakGlow} alt="" />
+          <Image src={BreakGlow} alt="image" />
+        </div>
+        <div className={styles.GlowDesk}>
+          <Image src={BreakdownGlowDesk} alt="image" />
         </div>
         <div className={styles.cardsCoin}>
-          <Image src={isMobile ? BreakdownCoinMob : BreakdownCoin} alt="" />
+          <Image
+            src={isMobile ? BreakdownCoinMob : BreakdownCoin}
+            alt="image"
+          />
         </div>
         {BreakdownCards.map((card, index) => (
           <div
@@ -152,7 +159,7 @@ export default function Breakdown() {
                             i === 1 ? styles.active : ""
                           }`}
                         >
-                          <Image src={invest.image} alt="" />
+                          <Image src={invest.image} alt="image" />
                         </div>
 
                         <div className={styles.cardInvestorDesc}>

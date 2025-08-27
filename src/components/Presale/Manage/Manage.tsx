@@ -68,7 +68,7 @@ export default function Manage() {
       <div className={styles.cardLeft}>
         <Border stroke="#010302" strokeWidth={2} width={42} height={42} />
         <div className={styles.cardLeftImage}>
-          <Image src={ManageImg} alt="" />
+          <Image src={ManageImg} alt="image" />
         </div>
         <Border
           stroke="#010302"

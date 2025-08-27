@@ -70,11 +70,11 @@ export default function FIX() {
 
       <div className={styles.fixCards}>
         <div className={styles.fixCircle}>
-          <Image src={isMobile ? circleMob : circle} alt="" />
+          <Image src={isMobile ? circleMob : circle} alt="image" />
         </div>
 
         <div className={styles.fixCircleBg}>
-          <Image src={circleMobBg} alt="" />
+          <Image src={circleMobBg} alt="image" />
         </div>
 
         {FixCards.map((card, index) => (

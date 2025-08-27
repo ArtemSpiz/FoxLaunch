@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "./Hero2x3.module.css";
 import Socials from "../Socials/Socials";
+import BgVideo from "../BgVideo/BgVideo";
+import Glow from "@/src/assets/img/tableGlow.png";
 
 type Card = {
   icon?: string | StaticImageData;
@@ -43,6 +45,7 @@ type Hero2x3Props = {
     data?: Card[];
   };
   imgPropClass?: string;
+  bgVideoWay?: string;
 };
 
 export default function Hero2x3({
@@ -52,6 +55,7 @@ export default function Hero2x3({
   layout = {},
   cards = {},
   imgPropClass = "",
+  bgVideoWay = "",
 }: Hero2x3Props) {
   const {
     heroTextClass = "p32",
@@ -81,6 +85,7 @@ export default function Hero2x3({
           })`,
         }}
       >
+        <BgVideo src={bgVideoWay} />
         <div className={`${styles.cardsWrapper} ${styles[typeOfWrapper]}`}>
           {hero.title && (
             <div className={`${styles.p48} ${styles.titleContainer}`}>
@@ -104,6 +109,9 @@ export default function Hero2x3({
             <div
               className={`${styles[heroTextClass]} ${styles[heroTextJC]} ${styles[texts]}`}
             >
+              <div className={styles.Glow}>
+                <Image src={Glow} alt="" />
+              </div>
               <div className={`${styles.title} title`}>{content.title}</div>
               {content.subtitle && (
                 <div className={styles.subtitle}>{content.subtitle}</div>
@@ -156,8 +164,8 @@ function HeroCard({
 }: HeroCardProps) {
   return (
     <div
-      className={`${styles.card} ${
-        styles[`cards${cardsType}_${index + 1}`]
+      className={`${styles.card} ${styles[`cards${cardsType}_${index + 1}`]} ${
+        styles[`cards${cardsType}`]
       } ${cardClass}`}
     >
       <Socials
@@ -171,7 +179,7 @@ function HeroCard({
         <div
           className={`${styles[`${imageClass}_${index + 1}`]} ${imgPropClass}`}
         >
-          <Image src={card.image} alt="" />
+          <Image src={card.image} alt="ffff" />
         </div>
       )}
 

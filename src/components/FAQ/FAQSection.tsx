@@ -60,7 +60,7 @@ export default function FAQSection() {
             ullamcorper sagittis fermentum suspendisse.
           </div>
           <div className={styles.img}>
-            <Image src={ImageDesktop} alt="" />
+            <Image src={ImageDesktop} alt="image" />
           </div>
         </div>
 
@@ -82,7 +82,7 @@ export default function FAQSection() {
                     transition: "transform 0.3s",
                   }}
                 >
-                  <Image src={Arrow} alt="" />
+                  <Image src={Arrow} alt="image" />
                 </div>
               </div>
 

@@ -251,7 +251,7 @@ export default function WhoWeAre() {
       </div>
 
       <div className={styles.whoWeImg}>
-        <Image src={isMobile ? whoBgMob : whoBg} alt="" />
+        <Image src={isMobile ? whoBgMob : whoBg} alt="image" />
       </div>
 
       <div
@@ -288,7 +288,7 @@ export default function WhoWeAre() {
               <div className={styles.whoWeCardTitle}>{card.title}</div>
             </div>
             <div className={styles.whoWeCardImg}>
-              <Image src={card.image} alt="" />
+              <Image src={card.image} alt="image" />
             </div>
             <div className={styles.whoWeCardSubtitle}>{card.subtitle}</div>
           </div>

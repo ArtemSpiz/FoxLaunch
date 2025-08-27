@@ -46,7 +46,7 @@ export default function MadeBlock({
             />
 
             <div className={styles.madeArrow}>
-              <Image src={ArrowCard} alt="" />
+              <Image src={ArrowCard} alt="image" />
             </div>
           </div>
 
@@ -56,7 +56,7 @@ export default function MadeBlock({
                 isFirstImage ? styles.madeImg1 : ""
               }`}
             >
-              <Image src={card.image} alt=" " />
+              <Image src={card.image} alt="image" />
             </div>
           )}
 

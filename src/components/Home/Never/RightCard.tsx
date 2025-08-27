@@ -25,7 +25,7 @@ export default function RightCard({
       <div className={styles.neverCardRContTop}>
         <div className={styles.neverCardRContTitle}>
           <div className={styles.neverCardRContIcon}>
-            <Image width={40} height={40} src={card.icon} alt="" />
+            <Image width={40} height={40} src={card.icon} alt="image" />
           </div>
           {card.title}
         </div>
@@ -34,7 +34,7 @@ export default function RightCard({
             openIndex === index ? styles.arrowOpen : ""
           }`}
         >
-          <Image src={ArrowNever} alt="" />
+          <Image src={ArrowNever} alt="image" />
         </div>
       </div>
 

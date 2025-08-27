@@ -25,6 +25,7 @@ export default function Pricing() {
     <div className={styles.Pricing}>
       <Header />
       <Hero2x3
+        bgVideoWay="/videos/Video-02.mov"
         bgImage={bgImage}
         hero={{
           title: "FundFix Crypto Prop Trading (CPT)",

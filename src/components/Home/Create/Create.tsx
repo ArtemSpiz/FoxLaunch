@@ -21,7 +21,7 @@ export default function Create() {
   return (
     <div className={`${styles.create} container`}>
       <div className={styles.createLeftImg}>
-        <Image src={createCross} alt="" />
+        <Image src={createCross} alt="image" />
       </div>
 
       <div className={styles.createCard}>
@@ -43,7 +43,10 @@ export default function Create() {
         </div>
 
         <div className={styles.createCardImg}>
-          <Image src={isMobile ? createImgRightMob : createImgRight} alt="" />
+          <Image
+            src={isMobile ? createImgRightMob : createImgRight}
+            alt="image"
+          />
         </div>
       </div>
     </div>

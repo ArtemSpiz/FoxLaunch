@@ -226,7 +226,7 @@
 }
 
 .btn {
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   right: 50%;
   transform: translate(50%, 0) !important;

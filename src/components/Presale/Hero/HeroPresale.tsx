@@ -12,6 +12,7 @@ import TabIconSvg1 from "../../../assets/svg/TabIconSvg1.svg";
 import TabIconSvg2 from "../../../assets/svg/TabIconSvg2.svg";
 import TabIconSvg3 from "../../../assets/svg/TabIconSvg3.svg";
 import Socials from "@/src/ui/Socials/Socials";
+import BgVideo from "@/src/ui/BgVideo/BgVideo";
 
 // Дані
 const groups = [
@@ -112,214 +113,222 @@ export default function HeroPresale() {
 
   return (
     <div className={`${styles.heroPresaleWrapper} heroContainer`}>
-      <div className={`${styles.heroPresale} heroContainerMob`}>
-        <div className={`${styles.heroPresaleGrid1} ${styles.heroPresCont}`}>
-          <h1 className={styles.title}>Join the $FIX token presale</h1>
-        </div>
-
-        <div className={`${styles.heroPresaleGrid2} ${styles.heroPresCont}`}>
-          <div className={styles.groups}>
-            {groups.map((item, i) => (
-              <div key={i} className={styles.group}>
-                <div className={styles.groupName}>{item.group}</div>
-                <div className={styles.bonus}>$FIX {item.bonus}</div>
-                <div className={styles.range}>{item.range}</div>
-              </div>
-            ))}
+      <div className={`${styles.heroPresale} `}>
+        <div className={`${styles.heroContentWrapper} heroContainerMob`}>
+          <div className={`${styles.heroPresaleGrid1} ${styles.heroPresCont}`}>
+            <h1 className={styles.title}>Join the $FIX token presale</h1>
           </div>
-          <p className={styles.note}>{heroNote}</p>
-        </div>
 
-        <div className={styles.heroPresaleGrid3}>
-          <div className={styles.grid3Card}>
-            {/* Tabs */}
-            <div className={styles.tabs}>
-              {tabs.map((tab, index) => (
-                <div
-                  key={index}
-                  className={`${styles.tab} ${
-                    activeTab === tab.tab ? styles.active : ""
-                  }`}
-                  onClick={() => setActiveTab(tab.tab)}
-                >
-                  <div
-                    className={`${styles.tabIcon} ${
-                      activeTab === tab.tab ? styles.active : ""
-                    }`}
-                  >
-                    <Image src={tab.icon} alt="" />
-                  </div>
-                  {tab.tab}
+          <div className={`${styles.heroPresaleGrid2} ${styles.heroPresCont}`}>
+            <div className={styles.groups}>
+              {groups.map((item, i) => (
+                <div key={i} className={styles.group}>
+                  <div className={styles.groupName}>{item.group}</div>
+                  <div className={styles.bonus}>$FIX {item.bonus}</div>
+                  <div className={styles.range}>{item.range}</div>
                 </div>
               ))}
             </div>
+            <p className={styles.note}>{heroNote}</p>
+          </div>
 
-            {/* Card Content */}
-            <div className={`${styles.cardBuy} `}>
-              <div className={`${styles.cardTitles}`}>
-                <div className={styles.cardTitle}>{currentTab.title}</div>
-                {currentTab.subtitle && (
-                  <div className={styles.cardSubtitle}>
-                    {currentTab.subtitle}
+          <div className={styles.heroPresaleGrid3}>
+            <div className={styles.grid3Card}>
+              {/* Tabs */}
+              <div className={styles.tabs}>
+                {tabs.map((tab, index) => (
+                  <div
+                    key={index}
+                    className={`${styles.tab} ${
+                      activeTab === tab.tab ? styles.active : ""
+                    }`}
+                    onClick={() => setActiveTab(tab.tab)}
+                  >
+                    <div
+                      className={`${styles.tabIcon} ${
+                        activeTab === tab.tab ? styles.active : ""
+                      }`}
+                    >
+                      <Image src={tab.icon} alt="image" />
+                    </div>
+                    {tab.tab}
+                  </div>
+                ))}
+              </div>
+
+              {/* Card Content */}
+              <div className={`${styles.cardBuy} `}>
+                <div className={`${styles.cardTitles}`}>
+                  <div className={styles.cardTitle}>{currentTab.title}</div>
+                  {currentTab.subtitle && (
+                    <div className={styles.cardSubtitle}>
+                      {currentTab.subtitle}
+                    </div>
+                  )}
+                </div>
+
+                {/* Buy Content */}
+                {currentTab.content === "buy" && (
+                  <>
+                    <div
+                      className={`${styles.cardBuyBot} ${
+                        activeTab === "Buy" ? styles.fadeEnter : ""
+                      }`}
+                    >
+                      <div className={styles.cardLine}>
+                        <Image src={heroPresaleLine} alt="image" />
+                      </div>
+                      <div className={styles.cardText}>
+                        USD Raised
+                        <span>
+                          $1,252.532 / <span>2,000.000</span>$
+                        </span>
+                      </div>
+                    </div>
+
+                    <div
+                      className={`${styles.cardInputs} ${
+                        activeTab === "Buy" ? styles.fadeEnter : ""
+                      }`}
+                    >
+                      <div className={styles.cardInputsTitle}>
+                        <Image src={infoCircle} alt="image" /> your purchased
+                        $FIX = 0
+                      </div>
+                      <div className={styles.cardInput}>
+                        <div className={styles.cardInpTexts}>
+                          <span>You pay</span>
+                          <input
+                            className={styles.inputPresale}
+                            value={ethAmount}
+                            onChange={(e) =>
+                              setEthAmount(Number(e.target.value))
+                            }
+                          />
+                        </div>
+                        <div className={styles.cardInputsDrop}>
+                          <Image src={Ethereum} alt="image" />
+                          <div className={styles.cardInputsDropTitle}>
+                            ETH <span>(ERC-20)</span>
+                            <Image src={DropDown} alt="image" />
+                          </div>
+                        </div>
+                      </div>
+                      <div className={styles.cardInput}>
+                        <div className={styles.cardInpTexts}>
+                          <span>You Receive $FIX</span>
+                          {fixAmount}
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Stake Content */}
+                {currentTab.content === "stake" && (
+                  <>
+                    <div
+                      className={`${styles.cardStakeBot} ${
+                        activeTab === "Stake" ? styles.fadeEnter : ""
+                      }`}
+                    >
+                      <div className={styles.cardStakeBotRow}>
+                        Staked <span>{stakingData.staked}</span>
+                      </div>
+                      <div className={styles.cardStakeBotRow}>
+                        Daily Staking <span>{stakingData.daily}</span>
+                      </div>
+                      <div className={styles.cardStakeBotRow}>
+                        Total Earnings <span>{stakingData.earnings}</span>
+                      </div>
+                    </div>
+
+                    <div
+                      className={`${styles.cardInputs} ${
+                        activeTab === "Stake" ? styles.fadeEnter : ""
+                      }`}
+                    >
+                      <div className={styles.cardInputsTitle}>
+                        <Image src={infoCircle} alt="image" /> Available to
+                        Stake: {stakingData.available}
+                      </div>
+                      <div className={styles.cardInput}>
+                        <div className={styles.cardInpTexts}>
+                          <span>Enter amount</span>
+                          <input
+                            className={styles.inputPresale}
+                            value={ethAmount}
+                            onChange={(e) =>
+                              setEthAmount(Number(e.target.value))
+                            }
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* History Content */}
+                {currentTab.content === "history" && (
+                  <div
+                    className={`${styles.cardHistoryBot} ${
+                      activeTab === "History" ? styles.fadeEnter : ""
+                    }`}
+                  >
+                    {transactions.map((row, index) => (
+                      <div className={styles.cardHistoryRow} key={index}>
+                        <Socials
+                          links={[{ name: "cardIcon", icon: row.icon }]}
+                          wrapperClass={styles.cardHistoryIcon}
+                          stroke="#A5C6E2"
+                        />
+                        <div className={styles.cardHistoryTitle}>
+                          {row.title} <span>{row.subtitle}</span>
+                        </div>
+                        <div
+                          className={`${styles.cardHistoryTag} ${
+                            row.tag === "Pending" ? styles.Pending : ""
+                          }`}
+                        >
+                          {row.tag}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
 
-              {/* Buy Content */}
-              {currentTab.content === "buy" && (
-                <>
-                  <div
-                    className={`${styles.cardBuyBot} ${
-                      activeTab === "Buy" ? styles.fadeEnter : ""
-                    }`}
-                  >
-                    <div className={styles.cardLine}>
-                      <Image src={heroPresaleLine} alt="" />
-                    </div>
-                    <div className={styles.cardText}>
-                      USD Raised
-                      <span>
-                        $1,252.532 / <span>2,000.000</span>$
-                      </span>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`${styles.cardInputs} ${
-                      activeTab === "Buy" ? styles.fadeEnter : ""
-                    }`}
-                  >
-                    <div className={styles.cardInputsTitle}>
-                      <Image src={infoCircle} alt="" /> your purchased $FIX = 0
-                    </div>
-                    <div className={styles.cardInput}>
-                      <div className={styles.cardInpTexts}>
-                        <span>You pay</span>
-                        <input
-                          className={styles.inputPresale}
-                          value={ethAmount}
-                          onChange={(e) => setEthAmount(Number(e.target.value))}
-                        />
-                      </div>
-                      <div className={styles.cardInputsDrop}>
-                        <Image src={Ethereum} alt="" />
-                        <div className={styles.cardInputsDropTitle}>
-                          ETH <span>(ERC-20)</span>
-                          <Image src={DropDown} alt="" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.cardInput}>
-                      <div className={styles.cardInpTexts}>
-                        <span>You Receive $FIX</span>
-                        {fixAmount}
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {/* Stake Content */}
-              {currentTab.content === "stake" && (
-                <>
-                  <div
-                    className={`${styles.cardStakeBot} ${
-                      activeTab === "Stake" ? styles.fadeEnter : ""
-                    }`}
-                  >
-                    <div className={styles.cardStakeBotRow}>
-                      Staked <span>{stakingData.staked}</span>
-                    </div>
-                    <div className={styles.cardStakeBotRow}>
-                      Daily Staking <span>{stakingData.daily}</span>
-                    </div>
-                    <div className={styles.cardStakeBotRow}>
-                      Total Earnings <span>{stakingData.earnings}</span>
-                    </div>
-                  </div>
-
-                  <div
-                    className={`${styles.cardInputs} ${
-                      activeTab === "Stake" ? styles.fadeEnter : ""
-                    }`}
-                  >
-                    <div className={styles.cardInputsTitle}>
-                      <Image src={infoCircle} alt="" /> Available to Stake:{" "}
-                      {stakingData.available}
-                    </div>
-                    <div className={styles.cardInput}>
-                      <div className={styles.cardInpTexts}>
-                        <span>Enter amount</span>
-                        <input
-                          className={styles.inputPresale}
-                          value={ethAmount}
-                          onChange={(e) => setEthAmount(Number(e.target.value))}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {/* History Content */}
-              {currentTab.content === "history" && (
-                <div
-                  className={`${styles.cardHistoryBot} ${
-                    activeTab === "History" ? styles.fadeEnter : ""
-                  }`}
-                >
-                  {transactions.map((row, index) => (
-                    <div className={styles.cardHistoryRow} key={index}>
-                      <Socials
-                        links={[{ name: "cardIcon", icon: row.icon }]}
-                        wrapperClass={styles.cardHistoryIcon}
-                        stroke="#A5C6E2"
-                      />
-                      <div className={styles.cardHistoryTitle}>
-                        {row.title} <span>{row.subtitle}</span>
-                      </div>
-                      <div
-                        className={`${styles.cardHistoryTag} ${
-                          row.tag === "Pending" ? styles.Pending : ""
-                        }`}
-                      >
-                        {row.tag}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+              {/* Buttons */}
+              <div className={styles.cardBtns}>
+                {currentTab.content === "buy" && (
+                  <>
+                    <button className={styles.learnBtn}>
+                      Learn More About the PLP
+                    </button>
+                    <a href="#" className={styles.howToBuy}>
+                      How to Buy
+                    </a>
+                  </>
+                )}
+                {currentTab.content === "stake" && (
+                  <>
+                    <button className={styles.learnBtn}>Stake</button>
+                    <a href="#" className={styles.howToBuy}>
+                      Unstake
+                    </a>
+                  </>
+                )}
+              </div>
             </div>
 
-            {/* Buttons */}
-            <div className={styles.cardBtns}>
-              {currentTab.content === "buy" && (
-                <>
-                  <button className={styles.learnBtn}>
-                    Learn More About the PLP
-                  </button>
-                  <a href="#" className={styles.howToBuy}>
-                    How to Buy
-                  </a>
-                </>
-              )}
-              {currentTab.content === "stake" && (
-                <>
-                  <button className={styles.learnBtn}>Stake</button>
-                  <a href="#" className={styles.howToBuy}>
-                    Unstake
-                  </a>
-                </>
-              )}
+            <p className={styles.noteMob}>{heroNote}</p>
+
+            <div className={styles.leaderboard}>
+              <Image src={Leader} alt="image" /> View Leaderboard
             </div>
-          </div>
-
-          <p className={styles.noteMob}>{heroNote}</p>
-
-          <div className={styles.leaderboard}>
-            <Image src={Leader} alt="" /> View Leaderboard
           </div>
         </div>
+        <BgVideo src="/videos/Video-01.mov" />
       </div>
     </div>
   );

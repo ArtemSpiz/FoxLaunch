@@ -18,23 +18,22 @@ const PressCards = [
   {
     icon: Icon1,
     image: Image1,
-    title: "AI Market Insights",
+    title: "Global Acceptance",
     subtitle:
-      "Real-time, AI-powered insights help you make smarter trades by identifying opportunities no human could spot.",
+      "Use your FundFix Crypto Card anywhere major credit cards are accepted—from restaurants to retail.",
   },
   {
     icon: Icon2,
     image: Image2,
-    title: "Copy Trading",
-    subtitle:
-      "Follow the pros. Mirror the moves of top-performing traders and share in their success.",
+    title: "Instant Conversions",
+    subtitle: "Convert crypto to fiat in real-time. No hassle, no delays.",
   },
   {
     icon: Icon3,
     image: Image3,
-    title: "Lead Trader Program",
+    title: "Rewards on Every Swipe",
     subtitle:
-      "Ready to lead? Become a top trader and earn up to 30% from those who copy your trades.",
+      "Earn benefits with every transaction. More trading, more spending, more rewards.",
   },
 ];
 
@@ -58,10 +57,11 @@ export default function Kit() {
     <div className={styles.Kit}>
       <Header />
       <Hero2x3
+        bgVideoWay="/videos/Video-07.mov"
         bgImage={bgImage}
         content={{
-          title: "AI Signals & Copy Trading",
-          subtitle: "Trading Smarter, Not Harder",
+          title: "Crypto Card Integration",
+          subtitle: "Spend Your Crypto Anywhere",
           text: "The FundFix Dashboard is where everything comes together. Your trades, performance, rewards—everything in one sleek, intuitive interface.",
         }}
         layout={{

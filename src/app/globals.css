@@ -41,6 +41,10 @@ button {
   max-width: 1600px;
 }
 
+.heroContainerMob {
+  position: relative;
+}
+
 .title {
   text-align: center;
   font-family: "IBM Plex Mono";

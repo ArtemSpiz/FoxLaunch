@@ -34,7 +34,7 @@ export default function LeftCard({ card, fade }: LeftCardProps) {
           fade ? styles.fadeInLeft : styles.fadeOutLeft
         }`}
       >
-        <Image src={card.image} alt="" />
+        <Image src={card.image} alt="image" />
       </div>
     </>
   );

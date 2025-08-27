@@ -5,14 +5,18 @@
   align-items: flex-start;
 }
 
+.contentWrapperBg {
+  position: relative;
+}
+
 .contentWrapper {
-  background-image: url("../../assets//img/VisionHeroBg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  z-index: 4;
   border: 1px solid #676767;
 }
 
@@ -172,7 +176,6 @@
   }
 
   .contentWrapper {
-    background-image: url("../../assets//img/VisionHeroBgMob.png");
     border: none;
   }
 

@@ -35,6 +35,14 @@
   position: relative;
 }
 
+.GlowDesk {
+  position: absolute;
+  right: -48px;
+  top: 300px;
+  width: 752.531px;
+  height: auto;
+}
+
 .cardsCoin {
   position: absolute;
   right: 0;
@@ -305,6 +313,10 @@
 
   .title {
     text-align: start;
+  }
+
+  .GlowDesk {
+    display: none;
   }
 }
 

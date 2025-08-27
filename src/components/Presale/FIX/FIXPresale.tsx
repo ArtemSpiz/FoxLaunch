@@ -51,12 +51,18 @@ export default function FIXPresale() {
       </div>
 
       <div className={styles.glow}>
-        <Image src={isMobile ? fixPresaleGlowMob : fixPresaleGlow} alt="" />
+        <Image
+          src={isMobile ? fixPresaleGlowMob : fixPresaleGlow}
+          alt="image"
+        />
       </div>
 
       <div className={styles.fixPresaleCards}>
         <div className={styles.cardsImage}>
-          <Image src={isMobile ? fixPresaleImgMob : fixPresaleImg} alt="" />
+          <Image
+            src={isMobile ? fixPresaleImgMob : fixPresaleImg}
+            alt="image"
+          />
         </div>
 
         {fixPresaleCards.map((card, index) => (
@@ -100,7 +106,9 @@ export default function FIXPresale() {
                 {card.title}
               </div>
             </div>
-            <div className={`${styles.cardSubtitle} ${styles.cardSubtitleMob} `}>
+            <div
+              className={`${styles.cardSubtitle} ${styles.cardSubtitleMob} `}
+            >
               {card.subtitle}
             </div>
           </div>

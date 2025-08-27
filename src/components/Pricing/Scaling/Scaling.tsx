@@ -64,7 +64,7 @@ export default function Scaling() {
                 <div
                   className={`${styles.image} ${styles[`image${index + 1}`]}`}
                 >
-                  <Image src={card.image} alt="" />
+                  <Image src={card.image} alt="image" />
                 </div>
                 <div className={`${styles.text} ${styles[`text${index + 1}`]}`}>
                   {card.text}
@@ -75,11 +75,11 @@ export default function Scaling() {
         ))}
         <div className={styles.glow}>
           {" "}
-          <Image src={Glow} alt="" />
+          <Image src={Glow} alt="image" />
         </div>
         <div className={styles.glow2}>
           {" "}
-          <Image src={Glow2} alt="" />
+          <Image src={Glow2} alt="image" />
         </div>
       </div>
     </div>

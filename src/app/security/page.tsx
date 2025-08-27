@@ -59,6 +59,7 @@ export default function Security() {
     <div className={styles.Security}>
       <Header />
       <Hero2x3
+        bgVideoWay="/videos/Video-03.mov"
         bgImage={bgImage}
         content={{
           title: "FundFix Prime",

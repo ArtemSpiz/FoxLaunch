@@ -16,11 +16,11 @@ export default function Made() {
         ))}
 
         <div className={styles.madeGlow}>
-          <Image src={madeGlow} alt="" />
+          <Image src={madeGlow} alt="image" />
         </div>
 
         <div className={styles.madeGlowMob}>
-          <Image src={madeGlow} alt="" />
+          <Image src={madeGlow} alt="image" />
         </div>
       </div>
     </div>

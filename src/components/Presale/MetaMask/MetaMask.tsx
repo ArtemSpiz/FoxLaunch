@@ -170,7 +170,7 @@ export default function MetaMask() {
                   isAnimating ? styles.imageSlideOut : styles.imageSlideIn
                 }`}
               >
-                <Image src={MetaMaskCards[currentIndex].image} alt="" />
+                <Image src={MetaMaskCards[currentIndex].image} alt="image" />
               </div>
               <Border
                 stroke="#010302"

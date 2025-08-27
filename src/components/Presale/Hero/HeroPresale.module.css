@@ -3,12 +3,19 @@
 }
 
 .heroPresale {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 253px);
-  background-image: url("../../../assets/img/heroPresaleBg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  position: relative;
+}
+
+.heroContentWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: 3;
+  border: 1px solid #676767;
+  grid-template-rows: repeat(3, 253px);
+  background: transparent;
+  position: relative;
 }
 
 .heroPresCont {
@@ -705,7 +712,7 @@
     align-items: start;
   }
 
-  .heroPresale {
+  .heroContentWrapper {
     display: flex;
     gap: 24px;
     flex-direction: column;
@@ -714,6 +721,7 @@
       #12273a 0%,
       #080808 100%
     );
+    border: none;
     padding-top: 40px;
   }
 

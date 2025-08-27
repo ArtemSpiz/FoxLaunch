@@ -41,32 +41,22 @@ const EstimateGridContent = [
   },
 ];
 
-const EstimateRightCard = [
-  {
-    tag: "Stage",
-    title: "Private Sale",
-  },
-  {
-    tag: "Bonus",
-    title: "20%",
-  },
-  {
-    tag: "Current Price",
-    title: "$0.0020",
-  },
-];
-
 const BDAG_BASE = 5_255_460;
 const USD_BASE = 3_170_000;
 const CONVERSION_RATE = USD_BASE / BDAG_BASE;
 
 export default function Estimate() {
-  const [rangeValue, setRangeValue] = useState<number>(33);
+  const [rangeValue, setRangeValue] = useState<number>(20);
   const [bdagAmount, setBdagAmount] = useState<string>("5,255,460");
   const [usdAmount, setUsdAmount] = useState<string>("$3.17M");
+  const [bonus, setBonus] = useState<number>(20);
 
   const handleRangeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRangeValue(Number(e.target.value));
+    const value = Number(e.target.value);
+    setRangeValue(value);
+
+    const newBonus = Math.round(value);
+    setBonus(newBonus);
   };
 
   const formatUSD = (value: number): string => {
@@ -123,7 +113,7 @@ export default function Estimate() {
             )}
             {card.image && (
               <div className={styles.estimateGridCardImg}>
-                <Image src={card.image} alt="" />
+                <Image src={card.image} alt="image" />
               </div>
             )}
             {card.subtitles && (
@@ -181,12 +171,15 @@ export default function Estimate() {
 
         <div className={styles.cardBot}>
           <div className={styles.cardRightContent}>
-            {EstimateRightCard.map((card, index) => (
-              <div key={index} className={styles.cardRightCol}>
-                {card.tag}
-                <span>{card.title}</span>
-              </div>
-            ))}
+            <div className={styles.cardRightCol}>
+              Stage <span>Private Sale</span>
+            </div>
+            <div className={styles.cardRightCol}>
+              Bonus <span>{bonus}%</span>
+            </div>
+            <div className={styles.cardRightCol}>
+              Current Price <span>$0.0020</span>
+            </div>
           </div>
 
           <input

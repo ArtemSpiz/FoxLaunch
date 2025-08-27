@@ -50,7 +50,7 @@ export default function Cards() {
         ))}
       </div>
       <div className={styles.image}>
-        <Image src={ImageCards} alt="" />
+        <Image src={ImageCards} alt="image" />
       </div>
       <div className={styles.cards}>
         {rightCards.map((card, i) => (

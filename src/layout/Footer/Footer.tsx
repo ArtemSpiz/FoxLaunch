@@ -33,7 +33,7 @@ export default function Footer() {
     <div className={styles.footer}>
       <div className={styles.footerLeft}>
         <div className={styles.footerLogo}>
-          <Image src={FooterLogo} alt="" />
+          <Image src={FooterLogo} alt="image" />
         </div>
         <Socials
           links={[

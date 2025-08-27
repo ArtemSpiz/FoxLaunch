@@ -57,6 +57,7 @@ export default function Press() {
     <div className={styles.Press}>
       <Header />
       <Hero2x3
+        bgVideoWay="/videos/Video-05.mov"
         bgImage={bgImage}
         content={{
           title: "FundFix Dashboard",

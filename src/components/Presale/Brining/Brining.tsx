@@ -76,14 +76,14 @@ export default function Brining() {
 
       <div className={styles.cardsWrapper}>
         <div className={styles.cardsImg}>
-          <Image src={briningImg} alt="" />
+          <Image src={briningImg} alt="image" />
         </div>
         {/* <div className={styles.cardsImgBg}>
-          <Image src={briningImgBg} alt="" />
+          <Image src={briningImgBg} alt="image" />
         </div> */}
 
         <div className={styles.cardsImgMob}>
-          <Image src={briningImgMob} alt="" />
+          <Image src={briningImgMob} alt="image" />
         </div>
 
         <div className={styles.cards}>

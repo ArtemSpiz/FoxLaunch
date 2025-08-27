@@ -214,7 +214,7 @@ export default function CryptoHero({ mode = "platforms" }) {
     <div className={`${styles.cryptoHero} heroContainer`}>
       <div className={styles.top}>
         <div className={styles.glow}>
-          <Image src={TableGlow} alt="" />
+          <Image src={TableGlow} alt="image" />
         </div>
         <div className={styles.titleWrapper}>
           <div

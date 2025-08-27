@@ -66,7 +66,7 @@ export default function Ecosystem() {
 
       <div className={styles.ecosystemCards}>
         <div className={styles.ecoImgCoin}>
-          <Image src={EcoImgCoin} alt="" />
+          <Image src={EcoImgCoin} alt="image" />
         </div>
         {EcosystemCards.map((card, index) => {
           const isActive =
@@ -98,7 +98,12 @@ export default function Ecosystem() {
               <div className={styles.ecoCardSubtitles}>
                 {card.subtitles.map((sub, i) => (
                   <div key={i} className={styles.ecoCardSub}>
-                    <Image width={40} height={40} src={EcoIconSub} alt="" />
+                    <Image
+                      width={40}
+                      height={40}
+                      src={EcoIconSub}
+                      alt="image"
+                    />
                     {sub.subtitle}
                   </div>
                 ))}

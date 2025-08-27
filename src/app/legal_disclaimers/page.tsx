@@ -58,6 +58,7 @@ export default function Legal() {
     <div className={styles.Legal}>
       <Header />
       <Hero2x3
+        bgVideoWay="/videos/Video-06.mov"
         bgImage={bgImage}
         content={{
           title: "AI Signals & Copy Trading",
