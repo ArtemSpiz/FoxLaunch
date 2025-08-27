@@ -13,7 +13,11 @@ export default function Hero() {
           </div>
         ))}
 
-        <BgVideo src="/videos/Video-Home.MOV" />
+        <BgVideo
+          srcMp4="/videos/mp4/Video-Home.mp4"
+          srcWebm="/videos/webm/Video-Home.webm"
+          src="/videos/Video-Home.MOV"
+        />
       </div>
     </div>
   );

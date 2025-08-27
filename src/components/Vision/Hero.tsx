@@ -43,7 +43,11 @@ export default function VisionHero() {
   return (
     <div className={`${styles.visionHero} heroContainer`}>
       <div className={`${styles.contentWrapperBg}`}>
-        <BgVideo src="/videos/Video-08.mov" />
+        <BgVideo
+          srcMp4="/videos/mp4/Video-08.mp4"
+          srcWebm="/videos/webm/Video-08.webm"
+          src="/videos/Video-08.mov"
+        />
         <div className={`${styles.contentWrapper} heroContainerMob`}>
           <div className={styles.texts}>
             <div className={`${styles.title} title`}>

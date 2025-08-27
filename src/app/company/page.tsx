@@ -54,6 +54,8 @@ export default function About() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-04.mov"
+        bgVideoWayMp4="/videos/mp4/Video-04.mp4"
+        bgVideoWayWebm="/videos/webm/Video-04.webm"
         bgImage={bgImage}
         content={{
           title: "FundFix OnChain",

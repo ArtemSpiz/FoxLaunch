@@ -2,6 +2,8 @@ import styles from "./BgVideo.module.css";
 
 interface BgVideoProps {
   src: string;
+  srcMp4: string;
+  srcWebm: string;
   type?: string;
   autoPlay?: boolean;
   loop?: boolean;
@@ -11,6 +13,8 @@ interface BgVideoProps {
 
 export default function BgVideo({
   src,
+  srcMp4,
+  srcWebm,
   type = "video/quicktime",
   autoPlay = true,
   loop = true,
@@ -26,7 +30,8 @@ export default function BgVideo({
         className={styles.video}
       >
         <source src={src} type={type} />
-        Ваш браузер не підтримує відео.
+        <source src={srcMp4} type="video/mp4" />
+        <source src={srcWebm} type="video/webm" />
       </video>
     </div>
   );

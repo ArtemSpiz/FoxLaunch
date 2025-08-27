@@ -44,7 +44,11 @@ export default function HeroNews() {
   return (
     <div className={`${styles.heroNews} heroContainer`}>
       <div className={styles.gridWrapper}>
-        <BgVideo src="/videos/Video-09.mov" />
+        <BgVideo
+          srcMp4="/videos/mp4/Video-09.mp4"
+          srcWebm="/videos/webm/Video-09.webm"
+          src="/videos/Video-09.mov"
+        />
         <div className={`${styles.grid} heroContainerMob`}>
           <div className={styles.titleWrapper}>
             <div className={styles.TableGlow}>

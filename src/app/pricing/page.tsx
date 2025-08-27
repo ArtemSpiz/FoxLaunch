@@ -26,6 +26,8 @@ export default function Pricing() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-02.mov"
+        bgVideoWayMp4="/videos/mp4/Video-02.mp4"
+        bgVideoWayWebm="/videos/webm/Video-02.webm"
         bgImage={bgImage}
         hero={{
           title: "FundFix Crypto Prop Trading (CPT)",

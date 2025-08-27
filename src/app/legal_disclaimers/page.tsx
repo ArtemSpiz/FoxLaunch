@@ -59,6 +59,8 @@ export default function Legal() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-06.mov"
+        bgVideoWayMp4="/videos/mp4/Video-06.mp4"
+        bgVideoWayWebm="/videos/webm/Video-06.webm"
         bgImage={bgImage}
         content={{
           title: "AI Signals & Copy Trading",

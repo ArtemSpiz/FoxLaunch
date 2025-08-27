@@ -27,12 +27,7 @@ const HeaderLinks = [
   {
     title: "About",
     arrow: true,
-    links: [
-      { title: "Company", href: "/company" },
-      { title: "Team", href: "/team" },
-      { title: "Careers", href: "/careers" },
-      { title: "Contact", href: "/contact" },
-    ],
+    links: [{ title: "Company", href: "/company" }],
   },
 ];
 

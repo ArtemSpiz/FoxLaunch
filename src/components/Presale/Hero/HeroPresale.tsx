@@ -328,7 +328,11 @@ export default function HeroPresale() {
             </div>
           </div>
         </div>
-        <BgVideo src="/videos/Video-01.mov" />
+        <BgVideo
+          srcMp4="/videos/mp4/Video-01.mp4"
+          srcWebm="/videos/webm/Video-01.webm"
+          src="/videos/Video-01.mov"
+        />
       </div>
     </div>
   );

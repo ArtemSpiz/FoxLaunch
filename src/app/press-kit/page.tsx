@@ -58,6 +58,8 @@ export default function Kit() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-07.mov"
+        bgVideoWayMp4="/videos/mp4/Video-07.mp4"
+        bgVideoWayWebm="/videos/webm/Video-07.webm"
         bgImage={bgImage}
         content={{
           title: "Crypto Card Integration",

@@ -50,7 +50,7 @@
 .headerLinksOpen {
   display: flex;
   width: 308px;
-  height: 363px;
+  height: 100%;
   padding: 16px;
   align-items: flex-start;
   gap: 10px;

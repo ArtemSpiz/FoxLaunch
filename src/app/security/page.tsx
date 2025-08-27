@@ -60,6 +60,8 @@ export default function Security() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-03.mov"
+        bgVideoWayMp4="/videos/mp4/Video-03.mp4"
+        bgVideoWayWebm="/videos/webm/Video-03.webm"
         bgImage={bgImage}
         content={{
           title: "FundFix Prime",

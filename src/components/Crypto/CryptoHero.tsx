@@ -243,6 +243,16 @@ export default function CryptoHero({ mode = "platforms" }) {
         </div>
 
         <BgVideo
+          srcMp4={
+            mode === "platforms"
+              ? "/videos/mp4/Video-10.mp4"
+              : "/videos/mp4/Video-12.mp4"
+          }
+          srcWebm={
+            mode === "platforms"
+              ? "/videos/webm/Video-10.webm"
+              : "/videos/webm/Video-12.webm"
+          }
           className={styles.bgVideoCrypto}
           src={
             mode === "platforms"

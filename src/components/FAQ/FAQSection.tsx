@@ -49,7 +49,11 @@ export default function FAQSection() {
   return (
     <div className={`${styles.faq} container`}>
       <div className={styles.faqWrapper}>
-        <BgVideo src="/videos/Video-01.mov" />
+        <BgVideo
+          srcMp4="/videos/mp4/Video-01.mp4"
+          srcWebm="/videos/webm/Video-01.webm"
+          src="/videos/Video-01.mov"
+        />
         <div className={styles.faqTexts}>
           <div className={styles.titleWrapper}>
             <div className={`${styles.title} title`}>FAQ</div>

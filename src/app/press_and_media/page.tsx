@@ -58,6 +58,8 @@ export default function Press() {
       <Header />
       <Hero2x3
         bgVideoWay="/videos/Video-05.mov"
+        bgVideoWayMp4="/videos/mp4/Video-05.mp4"
+        bgVideoWayWebm="/videos/webm/Video-05.webm"
         bgImage={bgImage}
         content={{
           title: "FundFix Dashboard",

@@ -46,6 +46,8 @@ type Hero2x3Props = {
   };
   imgPropClass?: string;
   bgVideoWay?: string;
+  bgVideoWayWebm?: string;
+  bgVideoWayMp4?: string;
 };
 
 export default function Hero2x3({
@@ -56,6 +58,8 @@ export default function Hero2x3({
   cards = {},
   imgPropClass = "",
   bgVideoWay = "",
+  bgVideoWayWebm = "",
+  bgVideoWayMp4 = "",
 }: Hero2x3Props) {
   const {
     heroTextClass = "p32",
@@ -85,7 +89,11 @@ export default function Hero2x3({
           })`,
         }}
       >
-        <BgVideo src={bgVideoWay} />
+        <BgVideo
+          srcWebm={bgVideoWayWebm}
+          srcMp4={bgVideoWayMp4}
+          src={bgVideoWay}
+        />
         <div className={`${styles.cardsWrapper} ${styles[typeOfWrapper]}`}>
           {hero.title && (
             <div className={`${styles.p48} ${styles.titleContainer}`}>
