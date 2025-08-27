@@ -441,7 +441,7 @@
   line-height: 125%; /* 20px */
 }
 
-input:focus {
+.inputPresale:focus {
   outline: none;
 }
 
