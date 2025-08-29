@@ -1,7 +1,7 @@
 import styles from "./BgVideo.module.css";
 
 interface BgVideoProps {
-  src: string;
+  src?: string;
   srcMp4: string;
   srcWebm: string;
   type?: string;

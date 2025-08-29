@@ -2,31 +2,11 @@
 
 import { useState, useEffect } from "react";
 import styles from "./MetaMask.module.css";
-import metaCardImg1 from "../../../assets/img/metaCardImg1.png";
 import BlueButton from "@/src/ui/BlueButton/BlueButton";
 import Image from "next/image";
 import Border from "@/src/ui/Border/Border";
+import { MetaMaskCards } from "@/src/constants/MetaMaskCards";
 
-const MetaMaskCards = [
-  {
-    title: "Download MetaMask",
-    subtitle:
-      "Install the MetaMask extension from the official website or app store",
-    image: metaCardImg1,
-  },
-  {
-    title: "Download MetaMask2",
-    subtitle:
-      "Install the MetaMask extension from the official website or app store",
-    image: metaCardImg1,
-  },
-  {
-    title: "Download MetaMask3",
-    subtitle:
-      "Install the MetaMask extension from the official website or app store",
-    image: metaCardImg1,
-  },
-];
 
 export default function MetaMask() {
   const [currentIndex, setCurrentIndex] = useState(0);

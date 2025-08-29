@@ -1,28 +1,9 @@
 import styles from "./Manage.module.css";
-
-import Coin from "../../../assets/svg/EstimateCoin.svg";
 import Socials from "@/src/ui/Socials/Socials";
 import Border from "@/src/ui/Border/Border";
 import Image from "next/image";
 import ManageImg from "../../../assets/img/ManageImg.png";
-
-const ManageCards = [
-  {
-    icon: Coin,
-    title: "Live Token Sale Updates: ",
-    subtitle: "View the current status of the presale",
-  },
-  {
-    icon: Coin,
-    title: "Investment Tracking: ",
-    subtitle: "See your investments and remaining vesting schedules",
-  },
-  {
-    icon: Coin,
-    title: "Secure Transactions: ",
-    subtitle: "All purchases are protected with advanced encryption",
-  },
-];
+import { ManageCards } from "@/src/constants/ManageCards";
 
 export default function Manage() {
   return (

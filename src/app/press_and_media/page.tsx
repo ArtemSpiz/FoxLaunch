@@ -6,36 +6,7 @@ import Header from "../../layout/Header/Header";
 import styles from "../page.module.css";
 import PressBg from "../../assets/img/PressBg.png";
 import PressBgMob from "../../assets/img/PressBgMob.png";
-import Icon1 from "@/src/assets/svg/PressIcon1.svg";
-import Icon2 from "@/src/assets/svg/PressIcon2.svg";
-import Icon3 from "@/src/assets/svg/PressIcon3.svg";
-
-import Image1 from "@/src/assets/img/PressImg1.png";
-import Image2 from "@/src/assets/img/PressImg2.png";
-import Image3 from "@/src/assets/img/PressImg3.png";
-
-const PressCards = [
-  {
-    icon: Icon1,
-    image: Image1,
-    title: "Track Your Success",
-    subtitle: "Monitor your performance with analytics that detail every move.",
-  },
-  {
-    icon: Icon2,
-    image: Image2,
-    title: "Claim Your Rewards",
-    subtitle:
-      "With $FIX tokens, you earn a share of platform revenue, and the dashboard makes tracking and claiming easy.",
-  },
-  {
-    icon: Icon3,
-    image: Image3,
-    title: "Full Transparency",
-    subtitle:
-      "Every transaction is recorded on the blockchain, ensuring everything is legitimate.",
-  },
-];
+import MediaCards from "@/src/constants/MediaCards";
 
 export default function Press() {
   const [bgImage, setBgImage] = useState(PressBg);
@@ -77,7 +48,7 @@ export default function Press() {
           enabled: true,
           imageClass: "imageType3",
           cardClass: styles.legalCard,
-          data: PressCards,
+          data: MediaCards,
         }}
       />
 

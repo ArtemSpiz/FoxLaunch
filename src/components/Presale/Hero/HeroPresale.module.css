@@ -574,6 +574,7 @@
     letter-spacing: -0.28px;
     margin-top: 24px;
     padding-inline: 16px;
+    display: flex;
   }
 
   .grid3Card {

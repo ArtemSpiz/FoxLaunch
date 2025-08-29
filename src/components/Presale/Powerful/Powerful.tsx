@@ -4,25 +4,7 @@ import Plus from "../../../assets/svg/Plus.svg";
 import Coin from "../../../assets/img/PowerfulCoin.png";
 import BlueButton from "@/src/ui/BlueButton/BlueButton";
 import Border from "@/src/ui/Border/Border";
-
-const PowerfulSubtitles = [
-  {
-    title: "Own Claim Tool",
-  },
-
-  {
-    title: "No delayed distribution",
-  },
-  {
-    title: "You are in control",
-  },
-  {
-    title: "Token Launch Coordination",
-  },
-  {
-    title: "Real-time Status Updates",
-  },
-];
+import { PowerfulSubtitles } from "@/src/constants/PowerfulSubtitles";
 
 export default function Powerful() {
   return (

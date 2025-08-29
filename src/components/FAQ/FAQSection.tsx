@@ -6,29 +6,9 @@ import styles from "./FAQ.module.css";
 import ImageDesktop from "../../assets/img/faqImg.png";
 import Arrow from "@/src/assets/svg/ArrowFaq.svg";
 import BgVideo from "@/src/ui/BgVideo/BgVideo";
+import { FAQContent } from "@/src/constants/FAQContent";
 
-const FAQContent = [
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    text: "Lorem ipsum dolor sit amet consectetur. Orci purus tempus in vulputate egestas. Dui mus montes gravida varius quis nulla. Odio nisl in elementum libero viverra magna in. Rhoncus rhoncus tellus metus duis quis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    text: "Lorem ipsum dolor sit amet consectetur. Orci purus tempus in vulputate egestas. Dui mus montes gravida varius quis nulla. Odio nisl in elementum libero viverra magna in. Rhoncus rhoncus tellus metus duis quis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    text: "Lorem ipsum dolor sit amet consectetur. Orci purus tempus in vulputate egestas. Dui mus montes gravida varius quis nulla. Odio nisl in elementum libero viverra magna in. Rhoncus rhoncus tellus metus duis quis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    text: "Lorem ipsum dolor sit amet consectetur. Orci purus tempus in vulputate egestas. Dui mus montes gravida varius quis nulla. Odio nisl in elementum libero viverra magna in. Rhoncus rhoncus tellus metus duis quis.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-    text: "Lorem ipsum dolor sit amet consectetur. Orci purus tempus in vulputate egestas. Dui mus montes gravida varius quis nulla. Odio nisl in elementum libero viverra magna in. Rhoncus rhoncus tellus metus duis quis.",
-  },
-];
+
 
 export default function FAQSection() {
   const [activeIndex, setActiveIndex] = useState(0);

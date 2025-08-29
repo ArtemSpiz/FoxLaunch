@@ -5,30 +5,7 @@ import styles from "./VisionHero.module.css";
 import Copy from "@/src/assets/svg/Copy.svg";
 import { useState } from "react";
 import BgVideo from "@/src/ui/BgVideo/BgVideo";
-
-const VisionCards = [
-  {
-    title: "Token Name",
-    subtitle: "Fundfix",
-  },
-  {
-    title: "Token Symbol",
-    subtitle: "$FIX",
-  },
-  {
-    title: "Launch on",
-    subtitle: "???",
-  },
-  {
-    title: "Token Type",
-    subtitle: "???",
-  },
-  {
-    title: "Token Contract Address",
-    subtitle: "0xCa1e5c23E3eEB1CB5dd1257FbB304FaB1227e094",
-    icon: true,
-  },
-];
+import { VisionCards } from "@/src/constants/VisionCards";
 
 export default function VisionHero() {
   const [copied, setCopied] = useState(false);

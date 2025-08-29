@@ -7,29 +7,8 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import ArrowHeader from "@/src/assets/svg/ArrowHeder.svg";
+import { HeaderLinks } from "@/src/constants/HeaderLinks";
 
-const HeaderLinks = [
-  { title: "Home", href: "/" },
-  { title: "Presale", href: "/presale" },
-  {
-    title: "Features",
-    arrow: true,
-    links: [
-      { title: "Crypto Prop Trading", href: "/crypto-prop-trading" },
-      { title: "Prime", href: "/prime" },
-      { title: "On Chain", href: "/on-chain" },
-      { title: "Dashboards", href: "/dashboards" },
-      { title: "AI Signals & Copy Trading", href: "/ai-signals" },
-      { title: "Crypto Card Integration", href: "/crypto-card" },
-    ],
-  },
-  { title: "Pricing", href: "/pricing" },
-  {
-    title: "About",
-    arrow: true,
-    links: [{ title: "Company", href: "/company" }],
-  },
-];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);

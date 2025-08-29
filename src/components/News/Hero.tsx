@@ -1,44 +1,9 @@
 import styles from "./Hero.module.css";
-import image1 from "../../assets/img/NewsCard1.png";
-import image2 from "../../assets/img/NewsCard2.png";
-import image3 from "../../assets/img/NewsCard3.png";
 import Image from "next/image";
 import TickCircle from "@/src/assets/svg/TickCircle.svg";
 import TableGlow from "@/src/assets/img/tableGlow.png";
 import BgVideo from "@/src/ui/BgVideo/BgVideo";
-
-const NewsCards = [
-  {
-    image: image1,
-    activeTitles: 1,
-  },
-  {
-    image: image2,
-    activeTitles: 3,
-  },
-  {
-    image: image3,
-    activeTitles: 5,
-  },
-];
-
-const CardsTitles = [
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet",
-  },
-  {
-    title: "Lorem ipsum dolor sit amet consectetur.",
-  },
-  {
-    title: "Lorem ipsum dolor ",
-  },
-  {
-    title: "Lorem ipsum",
-  },
-];
+import { CardsTitles, NewsCards } from "@/src/constants/NewsHeroCards";
 
 export default function HeroNews() {
   return (

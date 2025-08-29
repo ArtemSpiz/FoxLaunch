@@ -6,27 +6,7 @@ import snapchat from "../../assets/svg/Snapchat.svg";
 import facebook from "../../assets/svg/Facebook.svg";
 import youtube from "../../assets/svg/Youtube.svg";
 import Link from "next/link";
-
-const FooterLinks = [
-  {
-    links: [
-      { link: "FAQ’s", href: "/faq" },
-      { link: "Press and Media", href: "/press_and_media" },
-      { link: "Security and Compliance", href: "/security" },
-      { link: "Legal Disclaimers", href: "/legal_disclaimers" },
-      { link: "Presale Calculator", href: "/presale" },
-    ],
-  },
-  {
-    links: [
-      { link: "Press Kit", href: "/press-kit" },
-      { link: "Our Vision", href: "/our-vision" },
-      { link: "News Articles", href: "/news-articles" },
-      { link: "Private Client Contact Us", href: "/contact-private-client" },
-      { link: "Prop Challenges", href: "/prop-challenges" },
-    ],
-  },
-];
+import { FooterLinks } from "@/src/constants/FooterLinks";
 
 export default function Footer() {
   return (

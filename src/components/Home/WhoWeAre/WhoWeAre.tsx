@@ -6,66 +6,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import Socials from "@/src/ui/Socials/Socials";
 import styles from "./WhoWeAre.module.css";
-import whoCardImg3 from "../../../assets/img/whoCardImg3.png";
 import whoBg from "../../../assets/img/whoBg.png";
 import whoBgMob from "../../../assets/img/whoBgMob.png";
+import { WhoWeCards } from "@/src/constants/WhoWeCards";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const WhoWeCards = [
-  {
-    num: "01",
-    title: "WE HAVE",
-    image: whoCardImg3,
-    subtitle: (
-      <div className="whoCardSubtitle">
-        {" "}
-        <span>// combined extensive</span> <br /> {"MARKET EXPERIENCE, "}{" "}
-        <span>with</span> {" CUTTING-EDGE TECHNOLOGY, "} <span>to build</span>{" "}
-        {" A PLATFORM, "} <span>that delivers</span> {" POWERFUL RESULTS"}{" "}
-      </div>
-    ),
-  },
-  {
-    num: "02",
-    title: "WE HAVE",
-    image: whoCardImg3,
-    subtitle: (
-      <div className="whoCardSubtitle">
-        {" "}
-        <span>// combined extensive</span> <br /> {"MARKET EXPERIENCE, "}{" "}
-        <span>with</span> {" CUTTING-EDGE TECHNOLOGY, "} <span>to build</span>{" "}
-        {" A PLATFORM, "} <span>that delivers</span> {" POWERFUL RESULTS"}{" "}
-      </div>
-    ),
-  },
-  {
-    num: "03",
-    title: "WE HAVE",
-    image: whoCardImg3,
-    subtitle: (
-      <div className="whoCardSubtitle">
-        {" "}
-        <span>// combined extensive</span> <br /> {"MARKET EXPERIENCE, "}{" "}
-        <span>with</span> {" CUTTING-EDGE TECHNOLOGY, "} <span>to build</span>{" "}
-        {" A PLATFORM, "} <span>that delivers</span> {" POWERFUL RESULTS"}{" "}
-      </div>
-    ),
-  },
-  {
-    num: "04",
-    title: "WE HAVE",
-    image: whoCardImg3,
-    subtitle: (
-      <div className="whoCardSubtitle">
-        {" "}
-        <span>// combined extensive</span> <br /> {"MARKET EXPERIENCE, "}{" "}
-        <span>with</span> {" CUTTING-EDGE TECHNOLOGY, "} <span>to build</span>{" "}
-        {" A PLATFORM, "} <span>that delivers</span> {" POWERFUL RESULTS"}{" "}
-      </div>
-    ),
-  },
-];
 
 export default function WhoWeAre() {
   const [isMobile, setIsMobile] = useState(false);

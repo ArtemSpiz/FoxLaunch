@@ -3,61 +3,7 @@ import styles from "./Brining.module.css";
 import briningImg from "../../../assets/img/briningImg.png";
 import briningImgBg from "../../../assets/img/briningImgBg.png";
 import briningImgMob from "../../../assets/img/briningImgMob.png";
-
-const BriningCards = [
-  {
-    title: (
-      <div className={styles.cardTitle}>
-        Up to <span>20%</span> Commissions
-      </div>
-    ),
-    subtitle: (
-      <div className={styles.cardSubtitle}>
-        // earn a <span>PERCENTAGE</span> of every challenge <span>FEE</span>{" "}
-        sold
-      </div>
-    ),
-  },
-  {
-    title: (
-      <div className={styles.cardTitle}>
-        Up to <span>20%</span> Commissions
-      </div>
-    ),
-    subtitle: (
-      <div className={styles.cardSubtitle}>
-        // earn a <span>PERCENTAGE</span> of every challenge <span>FEE</span>{" "}
-        sold
-      </div>
-    ),
-  },
-  {
-    title: (
-      <div className={styles.cardTitle}>
-        Up to <span>20%</span> Commissions
-      </div>
-    ),
-    subtitle: (
-      <div className={styles.cardSubtitle}>
-        // earn a <span>PERCENTAGE</span> of every challenge <span>FEE</span>{" "}
-        sold
-      </div>
-    ),
-  },
-  {
-    title: (
-      <div className={styles.cardTitle}>
-        Up to <span>20%</span> Commissions
-      </div>
-    ),
-    subtitle: (
-      <div className={styles.cardSubtitle}>
-        // earn a <span>PERCENTAGE</span> of every challenge <span>FEE</span>{" "}
-        sold
-      </div>
-    ),
-  },
-];
+import { BriningCards } from "@/src/constants/BriningCards";
 
 export default function Brining() {
   return (
