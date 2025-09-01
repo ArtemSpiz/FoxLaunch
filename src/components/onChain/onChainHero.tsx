@@ -32,7 +32,8 @@ export default function OnChainHero() {
       </div>
       <div className={`${styles.BgVideo}`}>
         <video autoPlay loop muted className={styles.video}>
-          <source src={"/videos/Video-13.mov"} type="video/quicktime" />
+          <source src="/videos/mp4/Video-13.mp4" type="video/mp4" />
+          <source src="/videos/webm/Video-13.webm" type="video/webm" />
         </video>
       </div>
     </div>

@@ -321,12 +321,44 @@
     position: absolute;
     z-index: 44;
     top: calc(100% + 20px);
-    background-color: #080808;
+    right: 0;
+    background: #040404;
+    box-shadow: 0 37px 41.4px -5px rgba(110, 139, 193, 0.3);
+    width: 100%;
+    padding: 24px;
+    transition: all 0.4s ease-in-out;
   }
 
   .headerLinksMob {
     display: flex;
     gap: 16px;
     flex-direction: column;
+  }
+
+  .headerLinksOpenWrapper {
+    max-height: 100px;
+    transition: all 0.35s cubic-bezier(1, 1, 1, 1);
+    opacity: 0;
+    position: relative;
+    top: 0;
+    background: none;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .headerLinksOpen {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .headerLink::before {
+    position: absolute;
+    transform: translateX(0%);
+    left: 0px;
+  }
+
+  .headerLink:hover::before {
+    width: 50%;
   }
 }
