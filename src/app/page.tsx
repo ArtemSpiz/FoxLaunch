@@ -15,13 +15,13 @@ export default function Page() {
     <div className={styles.page}>
       <Header />
       <Hero />
-      {/* <Made /> */}
-      {/* <WhoWeAre /> */}
-      {/* <Never /> */}
-      {/* <FIX /> */}
-      {/* <Ecosystem /> */}
-      {/* <Create /> */}
-      {/* <Trouble /> */}
+      <Made />
+      <WhoWeAre />
+      <Never />
+      <FIX />
+      <Ecosystem />
+      <Create />
+      <Trouble />
       <Footer />
     </div>
   );
